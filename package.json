@@ -1,0 +1,8 @@
+{
+  "name": "lesrencontres-logement-social",
+  "version": "1.0.0",
+  "description": "Les Rencontres du Logement Social — Netlify Functions",
+  "dependencies": {
+    "googleapis": "^140.0.0"
+  }
+}

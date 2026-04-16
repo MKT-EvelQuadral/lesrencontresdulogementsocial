@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N3KW38LD');</script>
+<!-- End Google Tag Manager -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Les Rencontres du Logement Social — Annecy · 5 juin 2026</title>
+  <meta name="description" content="5 juin 2026 à Annecy. Matinée d'ateliers entre dirigeants du logement social : stratégie de cession, valorisation du patrimoine, IA et data. Inscription gratuite." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:wght@300;400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0E1D4D;
+      --navy-light: #1a2e6b;
+      --brand: #284181;
+      --brand-light: #3555a8;
+      --sky: #60A6DB;
+      --pop: #f8c1d9;
+      --warm: #fafaf8;
+      --text: #1e293b;
+      --text-muted: #64748b;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Roboto', system-ui, sans-serif;
+      background: var(--navy); color: var(--text);
+      -webkit-font-smoothing: antialiased; overflow-x: hidden;
+    }
+
+    /* ===================== NAV ===================== */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 0 2rem; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(14,29,77,0.97);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .nav-logo img { height: 36px; width: auto; }
+    .nav-left { display: flex; align-items: center; gap: 2rem; }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-links a {
+      font-size: 0.8rem; color: rgba(255,255,255,0.65); text-decoration: none;
+      font-weight: 400; letter-spacing: 0.02em; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--pop); }
+    .nav-cta {
+      background: var(--pop); color: var(--navy) !important; font-weight: 600 !important;
+      padding: 7px 18px; border-radius: 3px; font-size: 0.8rem !important;
+      transition: all 0.2s;
+    }
+    .nav-cta:hover { background: white !important; }
+
+    /* Dropdown */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-btn {
+      background: none; border: none; cursor: pointer;
+      font-size: 0.8rem; color: rgba(255,255,255,0.65);
+      font-family: inherit; display: flex; align-items: center; gap: 4px;
+      transition: color 0.2s;
+    }
+    .nav-dropdown-btn:hover { color: var(--pop); }
+    .nav-dropdown-menu {
+      display: none; position: absolute; right: 0; top: calc(100% + 8px);
+      width: 240px; background: var(--navy); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px; overflow: hidden; box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+    }
+    .nav-dropdown-menu.open { display: block; }
+    .nav-dropdown-menu a {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 10px 16px; font-size: 0.8rem; color: rgba(255,255,255,0.7);
+      text-decoration: none; transition: all 0.15s;
+    }
+    .nav-dropdown-menu a:hover { background: rgba(255,255,255,0.08); color: white; }
+    .nav-dropdown-menu .dd-date { font-size: 0.65rem; color: rgba(255,255,255,0.3); font-family: 'Space Mono', monospace; }
+
+    /* Mobile */
+    .nav-burger {
+      display: none; background: none; border: none;
+      color: white; cursor: pointer; padding: 4px;
+    }
+    .mobile-menu {
+      display: none; position: fixed; top: 64px; left: 0; right: 0;
+      background: var(--navy); border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 1.5rem; z-index: 99;
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a {
+      display: block; padding: 8px 0; color: rgba(255,255,255,0.8);
+      font-size: 0.9rem; text-decoration: none;
+    }
+    .mobile-menu .mobile-section {
+      font-family: 'Space Mono', monospace; font-size: 0.6rem;
+      color: rgba(255,255,255,0.3); letter-spacing: 0.15em;
+      text-transform: uppercase; margin-top: 1rem; margin-bottom: 0.5rem;
+    }
+    .mobile-cities-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    .mobile-cities-grid a {
+      display: flex; justify-content: space-between; padding: 6px 8px;
+      border-radius: 4px; font-size: 0.85rem;
+    }
+    .mobile-cities-grid a:hover { background: rgba(255,255,255,0.08); }
+    .mobile-cities-grid .dd-date { font-size: 0.6rem; color: rgba(255,255,255,0.3); font-family: 'Space Mono', monospace; }
+    .mobile-cta {
+      display: block; text-align: center; margin-top: 1rem;
+      background: var(--pop); color: var(--navy) !important; font-weight: 600;
+      padding: 10px; border-radius: 4px; font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta-wrap { display: none !important; }
+      .nav-burger { display: block; }
+    }
+
+    /* ===================== HERO ===================== */
+    .hero {
+      position: relative; min-height: 70vh;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--navy); overflow: hidden; padding-top: 64px;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center center;
+      opacity: 0.5; transition: opacity 0.5s;
+    }
+    .hero-grid {
+      position: absolute; inset: 0; opacity: 0.03;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: rgba(14,29,77,0.65);
+    }
+    .hero-content {
+      position: relative; z-index: 2; text-align: center;
+      padding: 4rem 2rem; max-width: 800px; width: 100%;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.75rem;
+      font-family: 'Space Mono', monospace; font-size: 0.65rem;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--pop); border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(14,29,77,0.6); padding: 8px 18px;
+      border-radius: 2px; margin-bottom: 1.5rem;
+      opacity: 0; animation: fadeUp 0.7s 0.1s forwards;
+    }
+    .hero-badge .badge-city { color: white; font-weight: 700; }
+    .hero-location {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-bottom: 2rem;
+      opacity: 0; animation: fadeUp 0.7s 0.2s forwards;
+    }
+    .hero-location a {
+      color: rgba(255,255,255,0.5); text-decoration: none;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      transition: color 0.2s;
+    }
+    .hero-location a:hover { color: white; }
+    .hero-title {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: clamp(2rem, 5vw, 3.4rem); color: white;
+      line-height: 1.1; margin-bottom: 1.5rem;
+      opacity: 0; animation: fadeUp 0.7s 0.3s forwards;
+    }
+    .hero-title br { display: inline; }
+    @media (max-width: 480px) {
+      .hero-title br { display: none; }
+      .hero-title { font-size: 1.5rem; line-height: 1.3; padding: 0 0.25rem; }
+      .hero-highlight { color: var(--pop) !important; }
+      .hero-content { padding: 2rem 1.25rem; }
+      .hero-badge { font-size: 0.55rem; padding: 6px 12px; }
+    }
+    @media (min-width: 481px) and (max-width: 768px) {
+      .hero-title { font-size: clamp(1.8rem, 5vw, 2.6rem); line-height: 1.15; }
+      .hero-highlight { color: var(--pop) !important; }
+    }
+    .hero-title em { font-style: italic; color: var(--pop); }
+    .hero-highlight { color: white; transition: color 0.3s ease; cursor: default; }
+    .hero-highlight:hover { color: var(--pop); }
+    .hero-sub {
+      font-size: clamp(0.85rem, 2.5vw, 1.1rem); color: rgba(255,255,255,0.55); font-weight: 300;
+      line-height: 1.7; max-width: 600px; margin: 0 auto 2rem;
+      opacity: 0; animation: fadeUp 0.7s 0.4s forwards;
+    }
+    .hero-actions {
+      display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+      opacity: 0; animation: fadeUp 0.7s 0.5s forwards;
+    }
+    .btn-primary {
+      display: inline-block; background: var(--pop); color: var(--navy);
+      font-weight: 600; font-size: 0.9rem; padding: 14px 32px;
+      border-radius: 4px; text-decoration: none; transition: all 0.3s;
+    }
+    .btn-primary:hover { background: white; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
+    .btn-secondary {
+      display: inline-block; background: rgba(255,255,255,0.08);
+      color: white; border: 1px solid rgba(255,255,255,0.2);
+      font-weight: 400; font-size: 0.9rem; padding: 14px 32px;
+      border-radius: 4px; text-decoration: none; transition: all 0.3s;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.15); }
+
+    /* ===================== CONTEXT SECTION ===================== */
+    .context-section { padding: 5rem 2rem; background: white; border-bottom: 1px solid #f0f0f0; }
+    .context-inner { max-width: 1100px; margin: 0 auto; }
+    .context-header { text-align: center; margin-bottom: 3rem; }
+    .section-eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--brand); margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: clamp(1.5rem, 3vw, 2.2rem); color: var(--navy); line-height: 1.3;
+    }
+    .section-sub {
+      color: var(--text-muted); font-weight: 300; font-size: 0.95rem;
+      line-height: 1.6; max-width: 600px; margin: 0.75rem auto 0;
+    }
+    .context-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+    @media (max-width: 1024px) { .context-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px)  { .context-grid { grid-template-columns: 1fr; } }
+    .context-card {
+      padding: 1.75rem; background: var(--warm); border: 1px solid #e8e8e4;
+      border-radius: 4px; transition: all 0.3s; position: relative; overflow: hidden;
+    }
+    .context-card::before {
+      content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+      background: var(--pop); transform: scaleX(0); transform-origin: left;
+      transition: transform 0.4s;
+    }
+    .context-card:hover::before { transform: scaleX(1); }
+    .context-card:hover { border-color: var(--brand); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(14,29,77,0.06); }
+    .context-card-icon {
+      width: 44px; height: 44px; border-radius: 8px; background: var(--navy);
+      display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;
+    }
+    .context-card-icon svg { width: 28px; height: 28px; }
+    .context-card h3 { font-size: 0.9rem; font-weight: 900; color: var(--navy); margin-bottom: 0.5rem; line-height: 1.4; }
+    .context-card p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; font-weight: 300; }
+    .context-target {
+      text-align: center; margin-top: 2.5rem; padding: 1rem;
+      font-size: 0.9rem; color: var(--navy);
+    }
+    .context-target strong { font-weight: 700; }
+    .context-cta { text-align: center; margin-top: 2rem; }
+
+    /* ===================== PROGRAMME ===================== */
+    .programme-section { padding: 5rem 2rem; background: var(--warm); }
+    .programme-inner { max-width: 800px; margin: 0 auto; }
+    .timeline { position: relative; padding-left: 3rem; margin-top: 3rem; }
+    .timeline::before {
+      content: ''; position: absolute; top: 0; left: 11px; bottom: 0;
+      width: 1px; background: linear-gradient(to bottom, var(--brand), var(--pop), transparent);
+    }
+    .tl-item { position: relative; margin-bottom: 2rem; }
+    .tl-dot {
+      position: absolute; left: -3rem; top: 0.25rem;
+      width: 23px; height: 23px; border-radius: 50%;
+      background: var(--warm); border: 2px solid var(--brand);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .tl-dot-inner { width: 7px; height: 7px; border-radius: 50%; background: var(--pop); }
+    .tl-dot.highlight {
+      background: var(--navy); border-color: var(--navy);
+      outline: 2px solid rgba(40,65,129,0.3); outline-offset: 2px;
+    }
+    .tl-dot.highlight .tl-dot-inner { background: var(--pop); }
+    .tl-card {
+      padding: 1.5rem; background: white; border: 1px solid #e8e8e4;
+      border-radius: 4px; transition: box-shadow 0.3s;
+    }
+    .tl-card:hover { box-shadow: 0 6px 20px rgba(14,29,77,0.06); }
+    .tl-card.highlight {
+      background: var(--navy); border-color: rgba(40,65,129,0.4);
+      box-shadow: 0 8px 30px rgba(14,29,77,0.15);
+    }
+    .tl-time {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--sky); margin-bottom: 0.35rem; font-weight: 700;
+    }
+    .tl-label {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 1.05rem; color: var(--navy); margin-bottom: 0.3rem;
+    }
+    .tl-card.highlight .tl-label { color: white; }
+    .tl-desc { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; font-weight: 300; }
+    .tl-card.highlight .tl-desc { color: rgba(255,255,255,0.55); }
+    .tl-link {
+      display: inline-block; margin-top: 0.75rem; font-size: 0.8rem; font-weight: 600;
+      color: var(--pop); text-decoration: none; transition: opacity 0.2s;
+    }
+    .tl-link:hover { opacity: 0.8; }
+    .tl-btn {
+      display: inline-block; margin-top: 0.75rem; font-size: 0.8rem; font-weight: 600;
+      background: var(--pop); color: var(--navy); padding: 8px 18px; border-radius: 3px;
+      text-decoration: none; transition: all 0.2s;
+    }
+    .tl-btn:hover { background: white; }
+
+    /* ===================== ATELIERS ===================== */
+    .ateliers-section { padding: 5rem 2rem; background: white; border-top: 1px solid #f0f0f0; }
+    .ateliers-inner { max-width: 1100px; margin: 0 auto; }
+    .ateliers-layout { display: flex; gap: 2rem; margin-top: 3rem; }
+    @media (max-width: 768px) { .ateliers-layout { flex-direction: column; } }
+    .ateliers-tabs { width: 280px; flex-shrink: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+    @media (max-width: 768px) { .ateliers-tabs { width: 100%; } }
+    .tab-btn {
+      text-align: left; padding: 1rem 1.25rem; border-radius: 4px;
+      font-size: 0.85rem; font-weight: 600; border: 1px solid transparent;
+      cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 0.75rem;
+      font-family: inherit; background: #f3f4f6; color: var(--text-muted);
+    }
+    .tab-btn:hover { background: #e8e9ed; }
+    .tab-btn.active { background: var(--navy); color: white; border-color: var(--navy); box-shadow: 0 4px 12px rgba(14,29,77,0.15); }
+    .ateliers-content {
+      flex: 1; background: var(--warm); border: 1px solid #e8e8e4;
+      border-radius: 4px; padding: 2rem; min-height: 380px;
+    }
+    .tab-panel { display: none; animation: fadeUp 0.3s ease; }
+    .tab-panel.active { display: block; }
+    .atelier-tag {
+      display: inline-block; font-size: 0.65rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 2px; margin-bottom: 1rem;
+    }
+    .atelier-title {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 1.3rem; color: var(--navy); line-height: 1.3; margin-bottom: 0.5rem;
+    }
+    .atelier-entity {
+      font-size: 0.75rem; color: var(--text-muted); font-style: italic;
+      border-left: 2px solid #e2e8f0; padding-left: 0.75rem; margin-bottom: 1.25rem;
+    }
+    .atelier-text { font-size: 0.85rem; color: #4b5563; line-height: 1.7; margin-bottom: 1.25rem; }
+    .atelier-list { list-style: none; padding: 0; margin-bottom: 1.5rem; }
+    .atelier-list li {
+      font-size: 0.8rem; color: #4b5563; padding: 0.3rem 0;
+      display: flex; align-items: flex-start; gap: 0.5rem;
+    }
+    .atelier-list li::before { content: '→'; color: var(--brand); flex-shrink: 0; margin-top: 1px; }
+    .atelier-cta {
+      display: inline-block; background: var(--navy); color: white;
+      font-size: 0.8rem; font-weight: 600; padding: 10px 20px;
+      border-radius: 3px; text-decoration: none; transition: all 0.2s;
+    }
+    .atelier-cta:hover { background: var(--brand); }
+
+    /* ===================== FORM ===================== */
+    .form-section { padding: 5rem 1rem; background: var(--navy); position: relative; }
+    @media (min-width: 601px) { .form-section { padding: 5rem 2rem; } }
+    .form-section .hero-grid { opacity: 0.03; }
+    .form-inner { max-width: 750px; margin: 0 auto; position: relative; z-index: 2; }
+    .form-header { text-align: center; margin-bottom: 2.5rem; }
+    .form-header .section-eyebrow { color: var(--pop); }
+    .form-header .section-title { color: white; }
+    .form-header .section-sub { color: rgba(255,255,255,0.45); }
+    .form-box {
+      background: white; border-radius: 6px; padding: 2.5rem;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    @media (max-width: 600px) { .form-box { padding: 1.5rem 1.25rem; } }
+    .form-group-title {
+      font-family: 'Space Mono', monospace; font-size: 0.6rem;
+      letter-spacing: 0.15em; text-transform: uppercase; color: var(--navy);
+      font-weight: 700; margin-bottom: 1.25rem; padding-bottom: 0.5rem;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem; }
+    @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+    .form-field label {
+      display: block; font-size: 0.8rem; font-weight: 500; color: #374151;
+      margin-bottom: 0.35rem;
+    }
+    .form-field label .req { color: #ef4444; }
+    .form-field input, .form-field select {
+      width: 100%; padding: 10px 14px; border: 1px solid #d1d5db;
+      border-radius: 4px; font-size: 0.85rem; font-family: inherit;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      background: white;
+    }
+    .form-field input:focus, .form-field select:focus {
+      outline: none; border-color: var(--brand);
+      box-shadow: 0 0 0 3px rgba(40,65,129,0.12);
+    }
+    .form-radio-group { display: flex; gap: 1.25rem; margin-top: 0.5rem; justify-content: flex-start; }
+    .form-radio-group label {
+      display: flex; align-items: center; gap: 0.35rem;
+      cursor: pointer; font-size: 0.85rem; font-weight: 400;
+    }
+    .form-note {
+      font-size: 0.7rem; color: #16a34a; font-style: italic; margin-bottom: 1.25rem;
+    }
+    .form-submit {
+      display: block; width: 100%; padding: 14px; border: none;
+      background: var(--brand); color: white; font-size: 0.9rem;
+      font-weight: 600; font-family: inherit; border-radius: 4px;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .form-submit:hover { background: var(--brand-light); }
+    .form-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+    #form-success {
+      display: none; padding: 1rem; margin-bottom: 1.5rem;
+      background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 4px;
+      color: #166534; font-weight: 500; text-align: center; font-size: 0.9rem;
+    }
+    #form-error {
+      display: none; padding: 1rem; margin-bottom: 1.5rem;
+      background: #fef2f2; border: 1px solid #fecaca; border-radius: 4px;
+      color: #991b1b; font-weight: 500; text-align: center; font-size: 0.9rem;
+    }
+    #atelier-error { display: none; color: #ef4444; font-size: 0.75rem; margin-top: 0.25rem; }
+
+    .spinner {
+      border: 2px solid rgba(255,255,255,.3); border-top-color: #fff;
+      border-radius: 50%; width: 16px; height: 16px;
+      animation: spin .7s linear infinite; display: inline-block;
+      vertical-align: middle; margin-right: 6px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ===================== FOOTER ===================== */
+    .footer {
+      background: var(--navy); padding: 3rem 2rem; text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-brand {
+      font-family: 'DM Serif Display', Georgia, serif;
+      color: white; font-size: 1rem; margin-bottom: 0.5rem;
+    }
+    .footer-brand span { color: var(--pop); }
+    .footer-text { color: rgba(255,255,255,0.3); font-size: 0.75rem; line-height: 1.8; }
+    .footer-divider { width: 40px; height: 1px; background: rgba(255,255,255,0.1); margin: 1.5rem auto; }
+
+    /* ===================== ANIMATIONS ===================== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+  </style>
+  <script src="/config.js"></script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3KW38LD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-left">
+    <a href="/" class="nav-logo"><img src="/logo-navbar.svg" alt="Quadral" /></a>
+    <div class="nav-links">
+      <a href="#contexte">Contexte</a>
+      <a href="#programme">Programme</a>
+      <a href="#ateliers">Ateliers</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-btn" id="dd-btn">
+          Nos étapes
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="nav-dropdown-menu" id="dd-menu">
+          <a href="/le-havre.html"><span>Le Havre</span><span class="dd-date">6 mai</span></a>
+          <a href="/paris.html"><span>Paris</span><span class="dd-date">19 mai</span></a>
+          <a href="/metz.html"><span>Metz</span><span class="dd-date">21 mai</span></a>
+          <a href="/lyon.html"><span>Lyon</span><span class="dd-date">4 juin</span></a>
+          <a href="/annecy.html"><span>Annecy</span><span class="dd-date">5 juin</span></a>
+          <a href="/bordeaux.html"><span>Bordeaux</span><span class="dd-date">9 juin</span></a>
+          <a href="/strasbourg.html"><span>Strasbourg</span><span class="dd-date">18 juin</span></a>
+          <a href="/toulouse.html"><span>Toulouse</span><span class="dd-date">23 juin</span></a>
+          <a href="/marseille.html"><span>Marseille</span><span class="dd-date">24 juin</span></a>
+          <a href="/lille.html"><span>Lille</span><span class="dd-date">30 juin</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-cta-wrap">
+    <a href="#inscription" class="nav-links nav-cta" style="text-decoration:none;">S'inscrire</a>
+  </div>
+  <button class="nav-burger" id="burger">
+    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#contexte" class="mobile-link">Contexte</a>
+  <a href="#programme" class="mobile-link">Programme</a>
+  <a href="#ateliers" class="mobile-link">Ateliers</a>
+  <div class="mobile-section">Nos étapes</div>
+  <div class="mobile-cities-grid">
+    <a href="/le-havre.html" class="mobile-link"><span>Le Havre</span><span class="dd-date">6 mai</span></a>
+    <a href="/paris.html" class="mobile-link"><span>Paris</span><span class="dd-date">19 mai</span></a>
+    <a href="/metz.html" class="mobile-link"><span>Metz</span><span class="dd-date">21 mai</span></a>
+    <a href="/lyon.html" class="mobile-link"><span>Lyon</span><span class="dd-date">4 jun</span></a>
+    <a href="/annecy.html" class="mobile-link"><span>Annecy</span><span class="dd-date">5 jun</span></a>
+    <a href="/bordeaux.html" class="mobile-link"><span>Bordeaux</span><span class="dd-date">9 jun</span></a>
+    <a href="/strasbourg.html" class="mobile-link"><span>Strasbourg</span><span class="dd-date">18 jun</span></a>
+    <a href="/toulouse.html" class="mobile-link"><span>Toulouse</span><span class="dd-date">23 jun</span></a>
+    <a href="/marseille.html" class="mobile-link"><span>Marseille</span><span class="dd-date">24 jun</span></a>
+    <a href="/lille.html" class="mobile-link"><span>Lille</span><span class="dd-date">30 jun</span></a>
+  </div>
+  <a href="#inscription" class="mobile-cta mobile-link">S'inscrire</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" style="background-image:url('/annecy.webp');"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      Les Rencontres du Logement Social — <span class="badge-city" id="hero-ville">Annecy</span> · <span id="hero-date">5 juin 2026</span>
+    </div>
+    <h1 class="hero-title">Financez vos futurs projets <br/>grâce aux <span class="hero-highlight">ressources cachées</span> <br/>de votre patrimoine.</h1>
+    <div class="hero-location">
+      <a id="hero-maps-link" href="#" target="_blank" rel="noopener">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <span id="hero-lieu">À venir</span>
+      </a>
+    </div>
+    <p class="hero-sub" style="color:white;">Une matinée d'échanges et de cas pratiques entre décideurs du logement social pour optimiser vos stratégies de cession, de gestion et de valorisation.</p>
+    <div class="hero-actions">
+      <a href="#inscription" class="btn-primary">S'inscrire et réserver mon atelier</a>
+      <a href="#contexte" class="btn-secondary">En savoir plus</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTEXTE -->
+<section id="contexte" class="context-section">
+  <div class="context-inner">
+    <div class="context-header reveal">
+      <p class="section-eyebrow">Le contexte</p>
+      <h2 class="section-title">Le modèle économique du logement social est sous tension</h2>
+      <p class="section-sub">Découvrez comment l'activation de certains leviers peut permettre de reconstituer vos fonds propres face aux défis actuels.</p>
+    </div>
+    <div class="context-grid reveal">
+      <div class="context-card">
+        <div class="context-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="rgb(248, 193, 217)" d="M64 32C28.7 32 0 60.7 0 96L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-192c0-35.3-28.7-64-64-64L72 128c-13.3 0-24-10.7-24-24S58.7 80 72 80l384 0c13.3 0 24-10.7 24-24s-10.7-24-24-24L64 32zM416 256a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+        </div>
+        <h3>Dégagez des fonds propres immédiats</h3>
+        <p>Via des stratégies d'arbitrage et de cession optimisées, en bloc ou lot par lot, selon le profil de votre patrimoine et la typologie de vos actifs.</p>
+      </div>
+      <div class="context-card">
+        <div class="context-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="rgb(248, 193, 217)" d="M21.5 181.1L78.3 67.4C89.2 45.7 111.3 32 135.6 32l304.9 0c24.2 0 46.4 13.7 57.2 35.4l56.8 113.7c3.6 7.2 5.5 15.1 5.5 23.2 0 27.3-21.2 49.7-48 51.6L512 448c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-192-96 0 0 176c0 26.5-21.5 48-48 48l-192 0c-26.5 0-48-21.5-48-48l0-176.1c-26.8-1.9-48-24.3-48-51.6 0-8 1.9-16 5.5-23.2zM128 256l0 112c0 8.8 7.2 16 16 16l128 0c8.8 0 16-7.2 16-16l0-112-160 0z"/></svg>
+        </div>
+        <h3>Transformez vos actifs tertiaires en centre de profit</h3>
+        <p>Pieds d'immeubles, surfaces vacantes, commercialisation : convertissez vos espaces tertiaires en actifs performants.</p>
+      </div>
+      <div class="context-card">
+        <div class="context-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="rgb(248, 193, 217)" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zm-312 8l0 64c0 13.3 10.7 24 24 24s24-10.7 24-24l0-64c0-13.3-10.7-24-24-24s-24 10.7-24 24zm80-96l0 160c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24s-24 10.7-24 24zm80 64l0 96c0 13.3 10.7 24 24 24s24-10.7 24-24l0-96c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+        </div>
+        <h3>Optimisez votre gestion</h3>
+        <p>Reporting sur-mesure, mise en copropriété, gestion des charges et impayés, gestion technique, LLI : externalisez vos process.</p>
+      </div>
+      <div class="context-card">
+        <div class="context-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="rgb(248, 193, 217)" d="M196.4 185.8l0-48.6c0-4.1 1.5-7.2 5.1-9.2l97.8-56.3c13.3-7.7 29.2-11.3 45.6-11.3 61.4 0 100.4 47.6 100.4 98.3 0 3.6 0 7.7-.5 11.8L343.3 111.1c-6.1-3.6-12.3-3.6-18.4 0L196.4 185.8zM424.7 375.2l0-116.2c0-7.2-3.1-12.3-9.2-15.9L287 168.4 329 144.3c3.6-2 6.7-2 10.2 0L437 200.7c28.2 16.4 47.1 51.2 47.1 85 0 38.9-23 74.8-59.4 89.6l0 0zM166.2 272.8l-42-24.6c-3.6-2-5.1-5.1-5.1-9.2l0-112.6c0-54.8 42-96.3 98.8-96.3 21.5 0 41.5 7.2 58.4 20L175.4 108.5c-6.1 3.6-9.2 8.7-9.2 15.9l0 148.5 0 0zm90.4 52.2l-60.2-33.8 0-71.7 60.2-33.8 60.2 33.8 0 71.7-60.2 33.8zm38.7 155.7c-21.5 0-41.5-7.2-58.4-20l100.9-58.4c6.1-3.6 9.2-8.7 9.2-15.9l0-148.5 42.5 24.6c3.6 2 5.1 5.1 5.1 9.2l0 112.6c0 54.8-42.5 96.3-99.3 96.3l0 0zM173.8 366.5L76.1 310.2c-28.2-16.4-47.1-51.2-47.1-85 0-39.4 23.6-74.8 59.9-89.6l0 116.7c0 7.2 3.1 12.3 9.2 15.9l128 74.2-42 24.1c-3.6 2-6.7 2-10.2 0zm-5.6 84c-57.9 0-100.4-43.5-100.4-97.3 0-4.1 .5-8.2 1-12.3l100.9 58.4c6.1 3.6 12.3 3.6 18.4 0l128.5-74.2 0 48.6c0 4.1-1.5 7.2-5.1 9.2l-97.8 56.3c-13.3 7.7-29.2 11.3-45.6 11.3l0 0zm127 60.9c62 0 113.7-44 125.4-102.4 57.3-14.9 94.2-68.6 94.2-123.4 0-35.8-15.4-70.7-43-95.7 2.6-10.8 4.1-21.5 4.1-32.3 0-73.2-59.4-128-128-128-13.8 0-27.1 2-40.4 6.7-23-22.5-54.8-36.9-89.6-36.9-62 0-113.7 44-125.4 102.4-57.3 14.8-94.2 68.6-94.2 123.4 0 35.8 15.4 70.7 43 95.7-2.6 10.8-4.1 21.5-4.1 32.3 0 73.2 59.4 128 128 128 13.8 0 27.1-2 40.4-6.7 23 22.5 54.8 36.9 89.6 36.9z"/></svg>
+        </div>
+        <h3>Utilisez l'IA et la data comme levier de pilotage</h3>
+        <p>Transformez les contraintes réglementaires ANCOLS (Enquête OPS-SLS, DPE,...) en solutions de pilotage, de décision et d'arbitrage patrimonial efficient.</p>
+      </div>
+    </div>
+    <div class="context-target reveal">
+      <p><strong>Vous êtes</strong> : <span style="color:#16a34a;">Directeur Général, Directeur Financier, Directeur de Patrimoine, Directeur du développement, DSI…</span> <strong>Cette journée est faite pour vous.</strong></p>
+    </div>
+    <div class="context-cta reveal">
+      <a href="#inscription" class="btn-primary" style="background:var(--brand);color:white;">S'inscrire et réserver mon atelier</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMME -->
+<section id="programme" class="programme-section">
+  <div class="programme-inner">
+    <div class="context-header reveal">
+      <p class="section-eyebrow">Le programme</p>
+      <h2 class="section-title">Un format conçu pour répondre à vos besoins</h2>
+      <p class="section-sub">Alternance de vision macroéconomique, d'ateliers en petits groupes et vision sur la place de l'IA chez les bailleurs sociaux.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+        <div class="tl-card">
+          <div class="tl-time">9h00 — 9h30</div>
+          <div class="tl-label">Petit déjeuner et mot d'accueil</div>
+          <div class="tl-desc">Accueil des participants et échange sur la journée autour d'un café.</div>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+        <div class="tl-card">
+          <div class="tl-time">9h40</div>
+          <div class="tl-label">Point marché et actualités</div>
+          <div class="tl-desc">Décryptage du marché national et local de l'accession, actualités juridiques, analyse de l'évolution des taux d'intérêt.</div>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot highlight"><div class="tl-dot-inner"></div></div>
+        <div class="tl-card highlight">
+          <div class="tl-time">10h30 — 11h30</div>
+          <div class="tl-label" style="color:white">Ateliers pratiques à la carte <span style="color:var(--sky);font-family:'Roboto',sans-serif;font-size:0.85rem;font-weight:300">(2 × 30 min)</span></div>
+          <div class="tl-desc">Plongez dans des problématiques terrain concrètes : choisissez 2 ateliers parmi les 4 thématiques proposées lors de votre inscription.</div>
+          <a href="#ateliers" class="tl-btn">Voir le détail des ateliers →</a>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+        <div class="tl-card">
+          <div class="tl-time">11h30 — 12h00</div>
+          <div class="tl-label">L'IA au cœur de l'efficacité</div>
+          <div class="tl-desc">Comment l'Intelligence Artificielle et la structuration de la donnée transforment le quotidien des bailleurs : pilotage des diagnostics, états des lieux augmentés, gestion des enquêtes OPS/SLS.</div>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+        <div class="tl-card">
+          <div class="tl-time">12h00</div>
+          <div class="tl-label">Clôture</div>
+          <div class="tl-desc">Consolidation commune et bénéfices d'une synergie de groupe.</div>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+        <div class="tl-card">
+          <div class="tl-time">À partir de 12h30</div>
+          <div class="tl-label">Déjeuner & rendez-vous individuels</div>
+          <div class="tl-desc">Déjeuner convivial (sur confirmation). L'équipe dirigeante de Quadral se tiendra à votre entière disposition l'après-midi pour des rendez-vous one-to-one.</div>
+          <a href="#inscription" class="tl-link">Je réserve mon rendez-vous →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ATELIERS -->
+<section id="ateliers" class="ateliers-section">
+  <div class="ateliers-inner">
+    <div class="context-header reveal">
+      <p class="section-eyebrow">Les ateliers</p>
+      <h2 class="section-title">Choisissez vos 2 ateliers pratiques</h2>
+      <p class="section-sub">Sessions interactives de 30 minutes en petits groupes. Naviguez entre les onglets pour faire votre choix.</p>
+    </div>
+    <div class="ateliers-layout reveal">
+      <div class="ateliers-tabs">
+        <button class="tab-btn active" data-tab="tab1"><span>🏢</span><span>Arbitrage et stratégie de cession</span></button>
+        <button class="tab-btn" data-tab="tab2"><span>💼</span><span>Valorisation &amp; Gestion</span></button>
+        <button class="tab-btn" data-tab="tab3"><span>🤝</span><span>Commercialisation & financement</span></button>
+        <button class="tab-btn" data-tab="tab4"><span>📊</span><span>Efficacité opérationnelle</span></button>
+      </div>
+      <div class="ateliers-content">
+        <div id="tab1" class="tab-panel active">
+          <span class="atelier-tag" style="background:#dbeafe;color:#1e40af;">EXPERTISE &amp; VENTE EN BLOC</span>
+          <h3 class="atelier-title">Le plan d'arbitrage, levier pour construire votre développement</h3>
+          <p class="atelier-entity">Quadral Expertise et Quadral Transactions</p>
+          <p class="atelier-text">Construisez votre PSP sur la durée : grâce à l'expertise et le plan d'arbitrage, identifiez les opportunités et les risques dans votre patrimoine afin de mettre en place la bonne stratégie de cessions.</p>
+          <ul class="atelier-list">
+            <li>Identification du patrimoine à fort potentiel de liquidité</li>
+            <li>Identification des risques</li>
+            <li>Stratégie de cession</li>
+          </ul>
+          <a href="#inscription" class="atelier-cta">Je m'inscris à cet atelier →</a>
+        </div>
+        <div id="tab2" class="tab-panel">
+          <span class="atelier-tag" style="background:#dcfce7;color:#166534;">Valorisation & Gestion</span>
+          <h3 class="atelier-title">Le parc tertiaire, gisement de trésorerie sous exploité</h3>
+          <p class="atelier-entity">Quadral Immobilier d'Entreprise et Quadral Property</p>
+          <p class="atelier-text">Pieds d'immeubles vacants, loyers sous-évalués ou non indexés, charges mal réparties... Reprenez le contrôle de vos surfaces tertiaires. Transformez vos espaces tertiaires en actifs performants.</p>
+          <ul class="atelier-list">
+            <li>Audit du parc et stratégie de gestion</li>
+            <li>Plateforme de suivi de votre patrimoine</li>
+            <li>Optimisation des recettes locatives</li>
+            <li>Pilotage de la commercialisation</li>
+          </ul>
+          <a href="#inscription" class="atelier-cta">Je m'inscris à cet atelier →</a>
+        </div>
+        <div id="tab3" class="tab-panel">
+          <span class="atelier-tag" style="background:#ffedd5;color:#9a3412;">Vente HLM, BRS, PSLA, VEFA</span>
+          <h3 class="atelier-title">La diversité de votre parc au service de vos objectifs de cession</h3>
+          <p class="atelier-entity">Quadral Transactions et Quadral Conseil en Financement</p>
+          <p class="atelier-text">Un parc diversifié appelle une stratégie de vente sur-mesure. Chaque lot a son acquéreur, encore faut-il savoir l'identifier, lui proposer le bon dispositif et l'accompagner jusqu'à la signature.</p>
+          <ul class="atelier-list">
+            <li>Définir la stratégie de commercialisation adaptée à votre patrimoine</li>
+            <li>Stratégie de vente adaptée à chaque typologie</li>
+            <li>Équipe commerciale dédiée</li>
+            <li>Expertise de l'ensemble des dispositifs d'accession sociale</li>
+            <li>Sécurisation des dossiers de financement</li>
+          </ul>
+          <a href="#inscription" class="atelier-cta">Je m'inscris à cet atelier →</a>
+        </div>
+        <div id="tab4" class="tab-panel">
+          <span class="atelier-tag" style="background:#f3e8ff;color:#6b21a8;">Gestion & Copropriété</span>
+          <h3 class="atelier-title">L'optimisation de la gestion de parc, un levier d'efficacité financière</h3>
+          <p class="atelier-entity">Quadral Property</p>
+          <p class="atelier-text">La performance de votre parc se joue dans la gestion du quotidien. Impayés qui s'accumulent, charges mal réparties, logements intermédiaires vacants… Chaque point de friction est un levier d'optimisation inexploité.</p>
+          <ul class="atelier-list">
+            <li>Recouvrement et gestion des impayés</li>
+            <li>Gestion et optimisation des charges</li>
+            <li>Mise en copropriété et gestion technique</li>
+            <li>Gestion du logement locatif intermédiaire (LLI)</li>
+            <li>Quittancement et reporting financier</li>
+          </ul>
+          <a href="#inscription" class="atelier-cta">Je m'inscris à cet atelier →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSCRIPTION -->
+<section id="inscription" class="form-section">
+  <div class="hero-grid"></div>
+  <div class="form-inner">
+    <div class="form-header reveal">
+      <p class="section-eyebrow" style="color:var(--pop)">Inscription</p>
+      <h2 class="section-title" style="color:white">Confirmez votre présence à <span id="form-ville">Annecy</span></h2>
+      <p class="section-sub" style="color:rgba(255,255,255,0.45)">Remplissez le formulaire pour valider votre inscription et choisir vos ateliers.</p>
+    </div>
+    <div class="form-box reveal">
+      <div id="form-success"></div>
+      <div id="form-error"></div>
+      <form id="registrationForm" novalidate>
+        <input type="hidden" name="ville" id="input-ville" />
+        <input type="hidden" name="date_evenement" id="input-date" />
+
+        <div class="form-group-title">Vos coordonnées</div>
+        <div class="form-grid">
+          <div class="form-field"><label>Prénom <span class="req">*</span></label><input type="text" name="prenom" required /></div>
+          <div class="form-field"><label>Nom <span class="req">*</span></label><input type="text" name="nom" required /></div>
+          <div class="form-field"><label>Fonction <span class="req">*</span></label><input type="text" name="fonction" required placeholder="ex : Directeur Général, DAF…" /></div>
+          <div class="form-field"><label>Organisme <span class="req">*</span></label><input type="text" name="organisme" required /></div>
+          <div class="form-field"><label>Email professionnel <span class="req">*</span></label><input type="email" name="email" required /></div>
+          <div class="form-field"><label>Téléphone <span style="color:var(--text-muted);font-weight:300;font-size:0.7rem">(mobile de préférence)</span></label><input type="tel" name="telephone" /></div>
+          <div class="form-field">
+            <label>Nombre de participants <span class="req">*</span></label>
+            <select name="participants" required>
+              <option value="">— Sélectionnez —</option>
+              <option value="1">1 participant</option>
+              <option value="2">2 participants</option>
+              <option value="3">3 participants</option>
+              <option value="4">4 participants</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>Présent(e) au déjeuner (12h30) ? <span class="req">*</span></label>
+            <div class="form-radio-group">
+              <label><input type="radio" name="dejeuner" value="oui" required /> Oui</label>
+              <label><input type="radio" name="dejeuner" value="non" /> Non</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group-title">Vos choix pour la matinée</div>
+        <p class="form-note">Ces choix pourront être modifiés au moment de votre arrivée.</p>
+        <div class="form-grid">
+          <div class="form-field">
+            <label>Atelier 1 — 10h30 à 11h00 <span class="req">*</span></label>
+            <select name="atelier1" id="select-atelier1" required>
+              <option value="">— Sélectionnez votre premier atelier —</option>
+              <option value="arbitrage">Arbitrage et stratégie de cession</option>
+              <option value="tertiaire">Pilotage du parc tertiaire</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>Atelier 2 — 11h00 à 11h30 <span class="req">*</span></label>
+            <select name="atelier2" id="select-atelier2" required>
+              <option value="">— Sélectionnez votre second atelier —</option>
+              <option value="commercialisation">Commercialisation & financement</option>
+              <option value="efficacite">Efficacité opérationnelle</option>
+            </select>
+            <div id="atelier-error">Veuillez choisir deux ateliers différents.</div>
+          </div>
+        </div>
+
+        <div style="text-align:center;padding-top:1rem;border-top:1px solid #f0f0f0;">
+          <button type="submit" id="submit-btn" class="form-submit" style="max-width:400px;margin:0 auto;">Je valide mon inscription</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <img src="/logo-quadral.svg" alt="Quadral" style="height:80px;width:auto;margin:0 auto 1rem;display:block;opacity:0.8;" />
+  <div class="footer-divider"></div>
+  <p class="footer-text">© 2026 Quadral</p>
+  <p class="footer-text">Événement réservé aux professionnels du logement social.</p>
+</footer>
+
+<script>
+  // ── CONFIG — METZ ──
+  const PAGE_VILLE   = 'Annecy';
+  const PAGE_DATE    = '5 juin 2026';
+  // Lieu chargé depuis config.js
+  const _cfg        = LIEUX_CONFIG['annecy'] || {};
+  const EVENT_VILLE = PAGE_VILLE;
+  const EVENT_DATE  = PAGE_DATE;
+  const EVENT_LIEU  = _cfg.nom      || 'À venir';
+  const EVENT_MAPS_URL = _cfg.maps_url || '#';
+
+  document.getElementById('hero-lieu').textContent = EVENT_LIEU;
+  document.getElementById('hero-maps-link').href    = EVENT_MAPS_URL || '#';
+  if (!EVENT_MAPS_URL) document.getElementById('hero-maps-link').style.pointerEvents = 'none';
+  document.querySelectorAll('#hero-ville, #form-ville').forEach(el => el.textContent = EVENT_VILLE);
+  document.getElementById('hero-date').textContent    = EVENT_DATE;
+  document.getElementById('input-ville').value        = EVENT_VILLE;
+  document.getElementById('input-date').value         = EVENT_DATE;
+
+
+  // Dropdown
+  const ddBtn = document.getElementById('dd-btn');
+  const ddMenu = document.getElementById('dd-menu');
+  ddBtn?.addEventListener('click', e => { e.stopPropagation(); ddMenu.classList.toggle('open'); });
+  document.addEventListener('click', () => ddMenu?.classList.remove('open'));
+
+  // Mobile menu
+  document.getElementById('burger').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-link').forEach(l =>
+    l.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'))
+  );
+
+  // Scroll reveal
+  const revealObs = new IntersectionObserver(entries =>
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+    { threshold: 0.08 }
+  );
+  document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+  // Tabs
+  function setTab(id) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === id));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === id));
+  }
+  setTab('tab1');
+  document.querySelectorAll('.tab-btn').forEach(b => b.addEventListener('click', () => setTab(b.dataset.tab)));
+
+  // Form
+  const LABELS = {
+    arbitrage: 'Arbitrage et stratégie de cession',
+    tertiaire: 'Pilotage du parc tertiaire',
+    commercialisation: 'Commercialisation & financement',
+    efficacite: 'Efficacité opérationnelle',
+  };
+  const form       = document.getElementById('registrationForm');
+  const submitBtn  = document.getElementById('submit-btn');
+  const successMsg = document.getElementById('form-success');
+  const errorMsg   = document.getElementById('form-error');
+  const atelError  = document.getElementById('atelier-error');
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    successMsg.style.display = errorMsg.style.display = 'none';
+    atelError.style.display = 'none';
+
+    const payload = Object.fromEntries(new FormData(form).entries());
+
+    if (payload.atelier1 && payload.atelier1 === payload.atelier2) {
+      atelError.style.display = 'block';
+      document.getElementById('select-atelier2').focus();
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span class="spinner"></span>Envoi en cours…';
+
+    try {
+      const res = await fetch('/api/inscription', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const result = await res.json();
+
+      if (result.success) {
+        successMsg.textContent   = '✅ Merci ! Votre inscription a bien été enregistrée.';
+        successMsg.style.display = 'block';
+        form.reset();
+        setTab('tab1');
+        successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        errorMsg.textContent   = result.message || 'Une erreur est survenue.';
+        errorMsg.style.display = 'block';
+      }
+    } catch {
+      errorMsg.textContent   = 'Erreur réseau. Merci de réessayer.';
+      errorMsg.style.display = 'block';
+    } finally {
+      submitBtn.disabled  = false;
+      submitBtn.innerHTML = 'Je valide mon inscription';
+    }
+  });
+</script>
+</body>
+</html>

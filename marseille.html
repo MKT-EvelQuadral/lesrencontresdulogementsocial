@@ -885,7 +885,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     submitBtn.innerHTML = '<span class="spinner"></span>Envoi en cours…';
 
     try {
-      const res = await fetch('/api/inscription', {
+      const res = await fetch('/.netlify/functions/inscription', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),

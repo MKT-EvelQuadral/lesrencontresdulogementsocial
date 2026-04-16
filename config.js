@@ -10,7 +10,7 @@
 // ══════════════════════════════════════════════════════════════
 
 const LIEUX_CONFIG = {
-  'le-havre':   { nom: 'À venir', maps_url: '' },
+  'le-havre':   { nom: 'Villa Raphëlle', maps_url: 'https://maps.app.goo.gl/Drbx1hF3qBhALkhJ6' },
   'paris':      { nom: 'À venir', maps_url: '' },
   'metz':       { nom: 'À venir', maps_url: '' },
   'lyon':       { nom: 'À venir', maps_url: '' },

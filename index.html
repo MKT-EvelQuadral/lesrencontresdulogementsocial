@@ -543,6 +543,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     el.style.transitionDelay = `${(i % 6) * 0.08}s`;
     observer.observe(el);
   });
+
+  // ══════════════════════════════════════════════════════════
+  //  ANALYTICS / DATA LAYER — GTM
+  // ══════════════════════════════════════════════════════════
+  window.dataLayer = window.dataLayer || [];
+  document.querySelectorAll('.city-card').forEach(card => {
+    const name = card.querySelector('.city-card-name')?.textContent.trim();
+    card.addEventListener('click', () => {
+      window.dataLayer.push({ event: 'ville_click', label: name });
+    });
+  });
 </script>
 </body>
 </html>

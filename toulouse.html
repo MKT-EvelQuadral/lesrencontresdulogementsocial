@@ -876,6 +876,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     if (payload.atelier1 && payload.atelier1 === payload.atelier2) {
       atelError.style.display = 'block';
       document.getElementById('select-atelier2').focus();
+      trackEvent('form_submit_error', 'ateliers identiques');
       return;
     }
 
@@ -896,17 +897,86 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         form.reset();
         setTab('tab1');
         successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        trackEvent('form_submit_success', 'inscription validée');
       } else {
         errorMsg.textContent   = result.message || 'Une erreur est survenue.';
         errorMsg.style.display = 'block';
+        trackEvent('form_submit_error', result.message || 'Erreur serveur');
       }
     } catch {
       errorMsg.textContent   = 'Erreur réseau. Merci de réessayer.';
       errorMsg.style.display = 'block';
+      trackEvent('form_submit_error', 'Erreur réseau');
     } finally {
       submitBtn.disabled  = false;
       submitBtn.innerHTML = 'Je valide mon inscription';
     }
+  });
+
+  // ══════════════════════════════════════════════════════════
+  //  ANALYTICS / DATA LAYER — GTM
+  // ══════════════════════════════════════════════════════════
+  window.dataLayer = window.dataLayer || [];
+  function trackEvent(event, label) {
+    window.dataLayer.push({ event: event, ville: PAGE_VILLE, label: label });
+  }
+
+  // CTA "S'inscrire et réserver mon atelier"
+  document.querySelectorAll('a.btn-primary[href="#inscription"]').forEach(btn => {
+    btn.addEventListener('click', () => trackEvent('cta_inscription_click', 'clic inscription'));
+  });
+
+  // Onglets ateliers
+  const TAB_LABELS = { tab1: 'QE+QT', tab2: 'QIE+QP', tab3: 'QT+QCF', tab4: 'QP' };
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const label = TAB_LABELS[btn.dataset.tab];
+      if (label) trackEvent('atelier_tab_click', label);
+    });
+  });
+
+  // Premier focus sur un champ du formulaire
+  let _formStarted = false;
+  document.querySelectorAll('#registrationForm input, #registrationForm select').forEach(field => {
+    field.addEventListener('focus', () => {
+      if (!_formStarted) {
+        _formStarted = true;
+        trackEvent('form_start', field.name || 'champ');
+      }
+    });
+  });
+
+  // Vue des sections (visible pendant 500ms — seuil adaptatif : 50% de la section OU 50% du viewport couvert)
+  const _SECTIONS = [
+    { sel: '.hero', label: 'hero' },
+    { sel: '#contexte', label: 'contexte' },
+    { sel: '#programme', label: 'programme' },
+    { sel: '#ateliers', label: 'ateliers' },
+    { sel: '#inscription', label: 'inscription' },
+  ];
+  const _viewed = new Set();
+  const _timers = new Map();
+  const _sectionObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      const label = e.target.dataset.sectionLabel;
+      const vh = (e.rootBounds && e.rootBounds.height) || window.innerHeight;
+      const coverRatio = e.intersectionRect.height / vh;
+      const enough = e.intersectionRatio >= 0.5 || coverRatio >= 0.5;
+      if (enough && !_viewed.has(label) && !_timers.has(label)) {
+        _timers.set(label, setTimeout(() => {
+          _viewed.add(label);
+          trackEvent('section_view', label);
+          _timers.delete(label);
+        }, 500));
+      } else if (!enough && _timers.has(label)) {
+        clearTimeout(_timers.get(label));
+        _timers.delete(label);
+      }
+    });
+  }, { threshold: Array.from({length: 11}, (_, i) => i * 0.1) });
+  _SECTIONS.forEach(({ sel, label }) => {
+    const el = document.querySelector(sel);
+    if (el) { el.dataset.sectionLabel = label; _sectionObs.observe(el); }
   });
 </script>
 </body>

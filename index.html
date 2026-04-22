@@ -2,6 +2,14 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
+  <!-- Preconnect tiers (perf) -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+  <link rel="preconnect" href="https://snap.licdn.com" crossorigin>
+  <link rel="preconnect" href="https://px.ads.linkedin.com" crossorigin>
+  <!-- Preload LCP image -->
+  <link rel="preload" as="image" href="/hero-bg.webp" fetchpriority="high">
   <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -412,7 +420,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- NAV -->
 <nav class="nav">
-  <a href="/" class="nav-logo"><img src="/logo-navbar.svg" alt="Quadral" /></a>
+  <a href="/" class="nav-logo"><img src="/logo-navbar.svg" alt="Quadral" width="182" height="36" /></a>
   <span class="nav-badge">Printemps 2026</span>
 </nav>
 
@@ -496,7 +504,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- FOOTER -->
 <footer class="footer">
-  <img src="/logo-quadral.svg" alt="Quadral" style="height:80px;width:auto;margin:0 auto 1rem;display:block;opacity:0.8;" />
+  <img src="/logo-quadral.svg" alt="Quadral" width="324" height="80" style="height:80px;width:auto;margin:0 auto 1rem;display:block;opacity:0.8;" />
   <div class="footer-divider"></div>
   <p class="footer-text">© 2026 Quadral</p>
   <p class="footer-text">Événement réservé aux professionnels du logement social.</p>

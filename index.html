@@ -284,6 +284,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     .city-card:hover::after { transform: scaleX(1); }
 
+    /* Carte d'un événement passé : grisée, non cliquable */
+    .city-card.city-card-past {
+      cursor: default; opacity: 0.5; filter: grayscale(0.7);
+    }
+    .city-card.city-card-past:hover {
+      transform: none; box-shadow: none; border-color: rgba(255,255,255,0.06);
+    }
+    .city-card.city-card-past:hover .city-card-bg { opacity: 0.35 !important; transform: none; }
+    .city-card.city-card-past::after { display: none; }
+    .city-card.city-card-past .city-card-date {
+      color: rgba(255,255,255,0.7);
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 3px 8px; border-radius: 2px;
+      align-self: flex-start;
+      font-weight: 700;
+    }
+
     /* ===================== VALUE PROSE ===================== */
     .value-prose {
       max-width: 750px; margin: 0 auto 3.5rem; text-align: left;
@@ -410,6 +427,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     .reveal-item.visible { opacity: 1; transform: translateY(0); }
   </style>
+  <script src="/config.js"></script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -523,19 +541,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     { name: "Lille",      date: "30 juin", slug: "lille",       img: "lille" },
   ];
 
+  // Détection des événements passés (date_iso <= aujourd'hui)
+  const _today = new Date(); _today.setHours(0, 0, 0, 0);
+  function isEventPast(slug) {
+    const cfg = (typeof LIEUX_CONFIG !== 'undefined') ? LIEUX_CONFIG[slug] : null;
+    if (!cfg || !cfg.date_iso) return false;
+    return new Date(cfg.date_iso + 'T00:00:00') <= _today;
+  }
+
   const grid = document.getElementById("cityGrid");
   cities.forEach((city, i) => {
-    const card = document.createElement("a");
-    card.href = `/${city.slug}.html`;
-    card.className = "city-card reveal-item";
+    const past = isEventPast(city.slug);
+    const card = document.createElement(past ? "div" : "a");
+    if (!past) card.href = `/${city.slug}.html`;
+    card.className = "city-card reveal-item" + (past ? " city-card-past" : "");
     card.innerHTML = `
       <div class="city-card-bg" style="background-image:url('/${city.img}.webp');opacity:0.35;"></div>
       <div class="city-card-overlay"></div>
       <div class="city-card-content">
         <span class="city-card-number">${String(i + 1).padStart(2, '0')}</span>
-        <div class="city-card-date">${city.date} 2026</div>
+        <div class="city-card-date">${past ? 'ÉVÉNEMENT PASSÉ' : city.date + ' 2026'}</div>
         <div class="city-card-name">${city.name}</div>
-        <div class="city-card-cta">S'inscrire <span class="city-card-cta-arrow">→</span></div>
+        ${past ? '' : `<div class="city-card-cta">S'inscrire <span class="city-card-cta-arrow">→</span></div>`}
       </div>
     `;
     grid.appendChild(card);
@@ -555,7 +582,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   //  ANALYTICS / DATA LAYER — GTM
   // ══════════════════════════════════════════════════════════
   window.dataLayer = window.dataLayer || [];
-  document.querySelectorAll('.city-card').forEach(card => {
+  document.querySelectorAll('.city-card:not(.city-card-past)').forEach(card => {
     const name = card.querySelector('.city-card-name')?.textContent.trim();
     card.addEventListener('click', () => {
       window.dataLayer.push({ event: 'ville_click', label: name });

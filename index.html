@@ -61,6 +61,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       padding: 4px 10px; border-radius: 2px;
       letter-spacing: 0.12em; text-transform: uppercase;
     }
+    .nav-actions {
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .nav-linkedin {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: white; text-decoration: none;
+      border: 1px solid rgba(248,193,217,0.3);
+      padding: 6px 12px; border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+    .nav-linkedin:hover {
+      background: var(--pop); color: var(--navy);
+      border-color: var(--pop);
+    }
+    .nav-linkedin svg { width: 14px; height: 14px; flex-shrink: 0; }
+    .nav-linkedin-text { display: inline; }
+    @media (max-width: 640px) {
+      .nav-badge { display: none; }
+      .nav-linkedin-text { display: none; }
+      .nav-linkedin { padding: 6px 8px; }
+    }
 
     /* ===================== HERO ===================== */
     .hero {
@@ -182,6 +205,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .value-prose {
       max-width: 750px; margin: 0 auto 3.5rem; text-align: left;
     }
+    .value-prose-block { margin-bottom: 2.5rem; }
+    .value-prose-block:last-child { margin-bottom: 0; }
+    .value-prose-subtitle {
+      display: flex; align-items: baseline; gap: 0.85rem;
+      margin-bottom: 0.85rem;
+    }
+    .value-prose-num {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem; letter-spacing: 0.18em;
+      color: var(--brand); flex-shrink: 0; font-weight: 700;
+    }
+    .value-prose-h3 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 1.2rem; color: var(--navy); line-height: 1.3;
+      font-weight: normal;
+    }
     .value-prose p {
       font-size: 0.92rem; color: var(--text-muted); line-height: 1.8;
       font-weight: 300; margin-bottom: 1.25rem;
@@ -301,16 +340,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       font-weight: 700;
     }
 
-    /* ===================== VALUE PROSE ===================== */
-    .value-prose {
-      max-width: 750px; margin: 0 auto 3.5rem; text-align: left;
-    }
-    .value-prose p {
-      font-size: 0.92rem; color: var(--text-muted); line-height: 1.8;
-      font-weight: 300; margin-bottom: 1.25rem;
-    }
-    .value-prose p:last-child { margin-bottom: 0; }
-
     /* ===================== PROGRAMME ===================== */
     .programme-section { padding: 6rem 2rem; background: var(--warm); }
     .programme-inner { max-width: 800px; margin: 0 auto; }
@@ -393,11 +422,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       font-weight: 600; font-size: 0.85rem; letter-spacing: 0.05em;
       padding: 14px 36px; border-radius: 4px; text-decoration: none;
       transition: all 0.3s ease;
+      border: 1px solid var(--pop);
     }
     .cta-button:hover {
       background: var(--navy); color: white; transform: translateY(-2px);
       box-shadow: 0 8px 25px rgba(14,29,77,0.15);
+      border-color: var(--navy);
     }
+    .cta-buttons {
+      display: flex; gap: 1rem; justify-content: center;
+      flex-wrap: wrap; align-items: center;
+    }
+    .cta-button-secondary {
+      background: transparent; color: var(--navy);
+      border: 1px solid var(--navy);
+      display: inline-flex; align-items: center; gap: 0.5rem;
+    }
+    .cta-button-secondary:hover {
+      background: var(--navy); color: white;
+      border-color: var(--navy);
+    }
+    .cta-button-secondary svg { width: 14px; height: 14px; flex-shrink: 0; }
 
     /* ===================== FOOTER ===================== */
     .footer {
@@ -438,7 +483,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- NAV -->
 <nav class="nav">
   <a href="/" class="nav-logo"><img src="/logo-navbar.svg" alt="Quadral" width="182" height="36" /></a>
-  <span class="nav-badge">Printemps 2026</span>
+  <div class="nav-actions">
+    <span class="nav-badge">Printemps 2026</span>
+    <a href="https://www.linkedin.com/company/quadral/" target="_blank" rel="noopener noreferrer" class="nav-linkedin" aria-label="Nous suivre sur LinkedIn">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      <span class="nav-linkedin-text">Nous suivre</span>
+    </a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -479,13 +530,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="value" class="value-section">
   <div class="value-inner">
     <div class="value-header reveal-item">
-      <p class="value-eyebrow">Pourquoi participer</p>
-      <h2 class="value-title">Le logement social fait face à une équation de plus en plus complexe</h2>
+      <p class="value-eyebrow">Pourquoi cette tournée</p>
+      <h2 class="value-title">La valeur cachée dans votre patrimoine peut financer vos prochains projets</h2>
     </div>
     <div class="value-prose reveal-item">
-      <p>Réduction de loyer de solidarité, hausse des coûts de rénovation énergétique, pression sur les fonds propres, contraintes réglementaires croissantes : les bailleurs sociaux doivent aujourd'hui faire plus avec moins, tout en maintenant leur mission d'intérêt général.</p>
-      <p>Dans ce contexte, les marges de manœuvre existent — mais elles supposent d'activer les bons leviers au bon moment. Arbitrage patrimonial, valorisation des actifs tertiaires, optimisation de la gestion courante, exploitation intelligente de la data et de l'IA : chaque organisation dispose de gisements de valeur souvent sous-exploités, faute de temps, d'outils ou d'accompagnement adapté.</p>
-      <p>C'est précisément l'objet de cette tournée. En une demi-journée, nous vous proposons de passer en revue les leviers concrets qui permettent de reconstituer vos fonds propres, de rationaliser vos process et de transformer vos contraintes réglementaires en outils de décision.</p>
+      <div class="value-prose-block">
+        <div class="value-prose-subtitle">
+          <span class="value-prose-num">01</span>
+          <h3 class="value-prose-h3">Une équation de plus en plus complexe</h3>
+        </div>
+        <p>Réduction de loyer de solidarité, hausse des coûts de rénovation énergétique, pression sur les fonds propres, contraintes réglementaires croissantes : les bailleurs sociaux doivent aujourd'hui faire plus avec moins, sans rien céder à leur mission d'intérêt général.</p>
+      </div>
+      <div class="value-prose-block">
+        <div class="value-prose-subtitle">
+          <span class="value-prose-num">02</span>
+          <h3 class="value-prose-h3">Des marges de manœuvre invisibles</h3>
+        </div>
+        <p>Au contact quotidien des bailleurs sociaux, nous faisons un constat partagé : dans chaque organisation, des marges de manœuvre existent. Un parc tertiaire mal valorisé, un arbitrage différé, une donnée patrimoniale dispersée, une opportunité de cession non détectée. Ces gisements de valeur ne sont pas absents, ils sont invisibles… Pas par manque de compétence, mais faute de temps, d'outils ou de regard transversal.</p>
+      </div>
+      <div class="value-prose-block">
+        <div class="value-prose-subtitle">
+          <span class="value-prose-num">03</span>
+          <h3 class="value-prose-h3">Six expertises pour une vision transversale</h3>
+        </div>
+        <p>C'est précisément ce regard transversal qui structure Quadral. Six expertises complémentaires : Transactions, Expertise, Conseil en Financement, Property, Immobilier d'Entreprise et E-Services pour couvrir l'ensemble du cycle de vie d'un actif. Cette continuité et cette vision, peu d'acteurs peuvent l'offrir au logement social.</p>
+      </div>
+      <div class="value-prose-block">
+        <div class="value-prose-subtitle">
+          <span class="value-prose-num">04</span>
+          <h3 class="value-prose-h3">Une matinée pour activer les leviers</h3>
+        </div>
+        <p>Cette tournée traduit cette approche en format court : une demi-journée, des cas concrets, des leviers activables, des échanges directs entre pairs. Pas de discours commercial. L'objectif : repartir avec des pistes opérationnelles pour reconstituer vos fonds propres et financer vos futurs projets grâce aux ressources cachées de votre patrimoine.</p>
+      </div>
     </div>
     <div class="value-scroll reveal-item">
       <a href="#villes">
@@ -515,7 +591,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="cta-inner reveal-item">
     <h2 class="cta-title">Prêt à nous rejoindre ?</h2>
     <p class="cta-text">Choisissez l'étape la plus proche de chez vous et réservez votre place en quelques clics. Inscription gratuite, places limitées.</p>
-    <a href="#villes" class="cta-button">Je choisis ma ville ↑</a>
+    <div class="cta-buttons">
+      <a href="#villes" class="cta-button">Je choisis ma ville ↑</a>
+      <a href="https://www.linkedin.com/company/quadral/" target="_blank" rel="noopener noreferrer" class="cta-button cta-button-secondary">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        Nous suivre
+      </a>
+    </div>
   </div>
 </section>
 

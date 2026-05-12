@@ -15,7 +15,7 @@
 const LIEUX_CONFIG = {
   'le-havre':   { nom: 'Villa Raphëlle', maps_url: 'https://maps.app.goo.gl/Drbx1hF3qBhALkhJ6', date_iso: '2026-05-06', adresse: '' },
   'paris':      { nom: 'Quadral - 89 rue de Tocqueville', maps_url: 'https://maps.app.goo.gl/RGUVBkU1fY7Ms8h26', date_iso: '2026-05-19', adresse: '89 rue de Tocqueville, 75017 Paris' },
-  'metz':       { nom: 'À venir', maps_url: '', date_iso: '2026-05-21', adresse: '' },
+  'metz':       { nom: 'EVEL', maps_url: 'https://maps.app.goo.gl/2it4udnbyEvDDAuz9', date_iso: '2026-05-21', adresse: '12 rue François de Curel, 57000 Metz' },
   'lyon':       { nom: 'À venir', maps_url: '', date_iso: '2026-06-04', adresse: '' },
   'annecy':     { nom: 'À venir', maps_url: '', date_iso: '2026-06-05', adresse: '' },
   'bordeaux':   { nom: 'À venir', maps_url: '', date_iso: '2026-06-09', adresse: '' },

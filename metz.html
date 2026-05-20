@@ -21,8 +21,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Les Rencontres du Logement Social — Metz · 21 mai 2026</title>
-  <meta name="description" content="21 mai 2026 à Metz. Matinée d'ateliers entre dirigeants du logement social : stratégie de cession, valorisation du patrimoine, IA et data. Inscription gratuite." />
+  <title>Les Rencontres du Logement Social — Metz · Date à définir</title>
+  <meta name="description" content="Étape de Metz, date à définir. Matinée d'ateliers entre dirigeants du logement social : stratégie de cession, valorisation du patrimoine, IA et data. Inscription gratuite." />
   <style>
     :root {
       --navy: #0E1D4D;
@@ -605,6 +605,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .reveal.visible { opacity: 1; transform: translateY(0); }
   </style>
   <script src="/config.js"></script>
+  <script src="/feedback.js"></script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -682,7 +683,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-badge">
-      Les Rencontres du Logement Social — <span class="badge-city" id="hero-ville">Metz</span> · <span id="hero-date">21 mai 2026</span>
+      Les Rencontres du Logement Social — <span class="badge-city" id="hero-ville">Metz</span> · <span id="hero-date">Date à définir</span>
     </div>
     <h1 class="hero-title">Financez vos futurs projets <br/>grâce aux <span class="hero-highlight">ressources cachées</span> <br/>de votre patrimoine.</h1>
     <div class="hero-location">
@@ -996,7 +997,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
   // ── CONFIG — METZ ──
   const PAGE_VILLE   = 'Metz';
-  const PAGE_DATE    = '21 mai 2026';
+  const PAGE_DATE    = 'Date à définir';
   // Lieu chargé depuis config.js
   const _cfg        = LIEUX_CONFIG['metz'] || {};
   const EVENT_VILLE = PAGE_VILLE;
@@ -1045,46 +1046,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const VILLE_KEY = 'metz';
 
   // ══════════════════════════════════════════════════════════
-  //  ÉVÉNEMENT PASSÉ — bandeau + désactivation du formulaire
+  //  ÉVÉNEMENT PASSÉ — délégué à /feedback.js
+  //  (bandeau + transformation du formulaire en questionnaire
+  //   + bouton de téléchargement du deck)
   // ══════════════════════════════════════════════════════════
-  (function handlePastEvent() {
-    const cfg = (typeof LIEUX_CONFIG !== 'undefined') ? LIEUX_CONFIG[VILLE_KEY] : null;
-    if (!cfg || !cfg.date_iso) return;
-    const today = new Date(); today.setHours(0, 0, 0, 0);
-    if (new Date(cfg.date_iso + 'T00:00:00') > today) return;
-
-    // Bandeau en haut de page
-    const banner = document.createElement('div');
-    banner.className = 'event-past-banner';
-    banner.textContent = 'Événement passé, merci de votre participation';
-    document.body.insertBefore(banner, document.body.firstChild);
-
-    // Mise à jour du header de la section inscription
-    const sectionTitle = document.querySelector('.form-header .section-title');
-    const sectionSub   = document.querySelector('.form-header .section-sub');
-    if (sectionTitle) sectionTitle.textContent = 'Inscriptions clôturées';
-    if (sectionSub)   sectionSub.style.display = 'none';
-
-    // On masque le contenu du form-box (formulaire conservé dans le DOM pour
-    // ne pas casser les écouteurs attachés plus bas) et on ajoute la notice
-    const formBox = document.querySelector('.form-box');
-    if (formBox) {
-      Array.from(formBox.children).forEach(c => { c.style.display = 'none'; });
-      const notice = document.createElement('div');
-      notice.className = 'form-past-notice';
-      notice.innerHTML =
-        '<div class="form-past-notice-icon">✓</div>' +
-        '<h3>Merci de votre participation !</h3>' +
-        '<p>L\'étape de ' + EVENT_VILLE + ' s\'est tenue le ' + EVENT_DATE + '.<br/>Retrouvez-nous bientôt sur les autres étapes de la tournée.</p>' +
-        '<a href="/" class="form-past-cta">← Découvrir les autres étapes</a>';
-      formBox.appendChild(notice);
-    }
-
-    // Masquage des CTA "S'inscrire" qui pointent vers #inscription
-    document.querySelectorAll('a[href="#inscription"]').forEach(a => { a.style.display = 'none'; });
-
-    trackEvent('event_past_view', VILLE_KEY);
-  })();
+  if (typeof window.RLS_initFeedback === 'function') {
+    window.RLS_initFeedback(VILLE_KEY, EVENT_VILLE, EVENT_DATE);
+  }
 
   // ══════════════════════════════════════════════════════════
   //  CALENDAR MODAL — génération des liens d'invitation

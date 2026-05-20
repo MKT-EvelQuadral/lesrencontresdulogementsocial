@@ -32,11 +32,28 @@
     insertBanner();
     transformInscriptionSection(villeKey, ville, dateLabel);
     hideRegistrationCTAs();
+    maybeScrollToFeedback();
 
     if (typeof window.trackEvent === 'function') {
       window.trackEvent('event_past_view', villeKey);
     }
   };
+
+  // ─── ANCRE #feedback (depuis email post-event) ───────────
+  function maybeScrollToFeedback() {
+    if (window.location.hash !== '#feedback') return;
+    const section = document.getElementById('inscription');
+    if (!section) return;
+    // Décale du haut pour ne pas passer sous la navbar fixe + bandeau
+    requestAnimationFrame(() => {
+      const rect = section.getBoundingClientRect();
+      const offset = 110;
+      window.scrollTo({
+        top: window.scrollY + rect.top - offset,
+        behavior: 'smooth',
+      });
+    });
+  }
 
   // ─── BANNER + CTA HIDING ─────────────────────────────────
   function insertBanner() {
@@ -58,7 +75,7 @@
     const sectionTitle = document.querySelector('.form-header .section-title');
     const sectionSub   = document.querySelector('.form-header .section-sub');
     if (sectionTitle) sectionTitle.textContent = 'Vos retours sur l\'événement';
-    if (sectionSub)   sectionSub.textContent   = 'Merci pour votre participation. Quelques minutes pour nous aider à progresser, puis vous pourrez télécharger la présentation.';
+    if (sectionSub)   sectionSub.textContent   = 'Complétez ce court questionnaire (moins de 2 minutes) pour accéder à la présentation de l\'événement.';
 
     const formBox = document.querySelector('.form-box');
     if (!formBox) return;
@@ -66,6 +83,7 @@
 
     const wrap = document.createElement('div');
     wrap.className = 'feedback-wrap';
+    wrap.id = 'feedback';
     formBox.appendChild(wrap);
 
     // Si feedback déjà soumis sur ce navigateur → afficher direct le bloc téléchargement
@@ -86,7 +104,7 @@
       <div class="feedback-intro">
         <div class="feedback-intro-icon">✓</div>
         <h3>Merci de votre participation à ${escVille} !</h3>
-        <p>Vos retours sont précieux. Le formulaire prend moins de 2 minutes.</p>
+        <p>Vos retours nous aident à améliorer les prochaines étapes.<br/><strong>Une fois le questionnaire envoyé, vous pourrez télécharger la présentation de l'événement.</strong></p>
       </div>
       <form id="feedbackForm" class="feedback-form" novalidate>
         ${question(1, 'Comment évaluez-vous globalement cette matinée ?', true,
@@ -126,7 +144,7 @@
 
         <div class="feedback-actions">
           <div class="feedback-error" id="feedback-error" hidden></div>
-          <button type="submit" class="feedback-submit" id="feedback-submit">Valider mon questionnaire</button>
+          <button type="submit" class="feedback-submit" id="feedback-submit">Valider et accéder à la présentation</button>
         </div>
       </form>
     `;
@@ -272,7 +290,7 @@
         errBox.textContent = result.message || 'Une erreur est survenue.';
         errBox.hidden = false;
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Valider mon questionnaire';
+        submitBtn.textContent = 'Valider et accéder à la présentation';
         if (typeof window.trackEvent === 'function') window.trackEvent('feedback_submit_error', result.message || 'Erreur serveur');
         return;
       }
@@ -298,7 +316,7 @@
       errBox.textContent = 'Erreur réseau. Merci de réessayer.';
       errBox.hidden = false;
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Valider mon questionnaire';
+      submitBtn.textContent = 'Valider et accéder à la présentation';
       if (typeof window.trackEvent === 'function') window.trackEvent('feedback_submit_error', 'Erreur réseau');
     }
   }

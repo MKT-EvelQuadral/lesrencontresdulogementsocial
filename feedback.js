@@ -124,10 +124,10 @@
 
         ${question(6, 'Souhaitez-vous qu\'un directeur Quadral vous recontacte pour approfondir un sujet ?', false, `
           <div class="feedback-radio-group">
-            <label><input type="radio" name="recontact" value="non" checked /> Non</label>
-            <label><input type="radio" name="recontact" value="oui" /> Oui</label>
+            <label><input type="radio" name="recontact" value="non" /> Non</label>
+            <label><input type="radio" name="recontact" value="oui" checked /> Oui</label>
           </div>
-          <div class="feedback-recontact-fields" hidden>
+          <div class="feedback-recontact-fields">
             <div class="feedback-field">
               <label>Votre email professionnel</label>
               <input type="email" name="recontact_email" placeholder="prenom.nom@exemple.fr" />

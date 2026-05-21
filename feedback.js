@@ -120,9 +120,9 @@
           scaleHTML('nps', 0, 10, 'Pas du tout', 'Absolument'))}
 
         ${question(5, 'Quel sujet vous a le plus marqué, ou que vous aimeriez approfondir ?', false,
-          `<textarea name="sujet_marquant" rows="3" placeholder="Optionnel"></textarea>`)}
+          `<textarea name="sujet_marquant" rows="3" placeholder="Ventes en bloc, commercialisation, expertise, gestion de copro…"></textarea>`)}
 
-        ${question(6, 'Souhaitez-vous qu\'un directeur Quadral vous recontacte pour approfondir un sujet ?', false, `
+        ${question(6, 'Souhaitez-vous une présentation à vos équipes internes ?', false, `
           <div class="feedback-radio-group">
             <label><input type="radio" name="recontact" value="non" /> Non</label>
             <label><input type="radio" name="recontact" value="oui" checked /> Oui</label>
@@ -134,13 +134,13 @@
             </div>
             <div class="feedback-field">
               <label>Sur quel sujet précisément ?</label>
-              <textarea name="recontact_sujet" rows="2" placeholder="ex : stratégie de cession, gestion de copropriété…"></textarea>
+              <textarea name="recontact_sujet" rows="2" placeholder="ex : stratégie de cession, commercialisation, gestion de copropriété…"></textarea>
             </div>
           </div>
         `)}
 
         ${question(7, 'Une remarque, suggestion ou critique ?', false,
-          `<textarea name="commentaire" rows="3" placeholder="Optionnel"></textarea>`)}
+          `<textarea name="commentaire" rows="3" placeholder="Laissez-nous un commentaire. Votre retour est précieux afin de renouveler ces recontres sous un angles encore plus pertinent pour vous."></textarea>`)}
 
         <div class="feedback-actions">
           <div class="feedback-error" id="feedback-error" hidden></div>

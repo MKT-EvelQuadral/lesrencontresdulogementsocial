@@ -140,7 +140,7 @@
         `)}
 
         ${question(7, 'Une remarque, suggestion ou critique ?', false,
-          `<textarea name="commentaire" rows="3" placeholder="Laissez-nous un commentaire. Votre retour est précieux afin de renouveler ces recontres sous un angles encore plus pertinent pour vous."></textarea>`)}
+          `<textarea name="commentaire" rows="3" placeholder="Laissez-nous un commentaire. Votre retour est précieux afin de renouveler ces recontres sous un angle encore plus pertinent pour vous."></textarea>`)}
 
         <div class="feedback-actions">
           <div class="feedback-error" id="feedback-error" hidden></div>

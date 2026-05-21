@@ -318,7 +318,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 1.25rem;
+        margin-bottom: 1.875rem;
       }
       .testimonial-logo {
         max-height: 56px;
@@ -342,7 +342,7 @@
         margin: 0 0 1.5rem;
         flex: 1;
         position: relative;
-        padding: 0 0.5rem;
+        padding: 0.625rem 0.5rem 0;
       }
       .testimonial-quote-mark {
         position: absolute;

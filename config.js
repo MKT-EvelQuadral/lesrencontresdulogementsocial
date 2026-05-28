@@ -18,11 +18,11 @@ const LIEUX_CONFIG = {
   'metz':       { nom: 'EVEL - 12 rue François de Curel', maps_url: 'https://maps.app.goo.gl/2it4udnbyEvDDAuz9', date_iso: null, adresse: '12 rue François de Curel, 57000 Metz' },
   'lyon':       { nom: 'GRAVITY', maps_url: 'https://maps.app.goo.gl/8eHjNRDrY5KTjdET6', date_iso: '2026-06-04', adresse: '1 rue de la croix Barret, LYON 7' },
   'annecy':     { nom: 'À venir', maps_url: '', date_iso: '2026-06-05', adresse: '' },
-  'bordeaux':   { nom: 'À venir', maps_url: '', date_iso: '2026-06-09', adresse: '' },
-  'strasbourg': { nom: 'À venir', maps_url: '', date_iso: '2026-06-18', adresse: '' },
-  'toulouse':   { nom: 'À venir', maps_url: '', date_iso: '2026-06-23', adresse: '' },
-  'marseille':  { nom: 'À venir', maps_url: '', date_iso: '2026-06-24', adresse: '' },
-  'lille':      { nom: 'À venir', maps_url: '', date_iso: '2026-06-30', adresse: '' },
+  'bordeaux':   { nom: 'Now Co-Working', maps_url: 'https://maps.app.goo.gl/DudvQL7SoMzJyDi66', date_iso: '2026-06-09', adresse: 'Bordeaux Village H15, Quai des Chartrons, 33300 Bordeaux' },
+  'strasbourg': { nom: 'Now Co-Working', maps_url: 'https://maps.app.goo.gl/gv6KkWPXDFAzjX2dA', date_iso: '2026-06-18', adresse: '10 Pl. Gutenberg, 67000 Strasbourg' },
+  'toulouse':   { nom: 'Now Co-Working', maps_url: 'https://maps.app.goo.gl/yXrvNA5S4fFKqw448', date_iso: '2026-06-23', adresse: '33 Piste des Géants, 31400 Toulouse' },
+  'marseille':  { nom: 'Now Co-Working', maps_url: 'https://maps.app.goo.gl/rGEBktPPyFkx8JTg8', date_iso: '2026-06-24', adresse: '19 Quai de Rive Neuve, 13007 Marseille' },
+  'lille':      { nom: 'Now Co-Working', maps_url: 'https://maps.app.goo.gl/RjzqjbsgR7rUWkL69', date_iso: '2026-06-30', adresse: 'Palais de la bourse, 40 Pl. du Théâtre, 59800 Lille' },
 };
 
 // ══════════════════════════════════════════════════════════════

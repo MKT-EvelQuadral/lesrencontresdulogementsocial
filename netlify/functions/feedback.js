@@ -71,7 +71,7 @@ exports.handler = async (event) => {
       nps,
       sujet_marquant,
       recontact,
-      recontact_email,
+      recontact_entreprise,
       recontact_sujet,
       commentaire,
     } = body;
@@ -107,7 +107,7 @@ exports.handler = async (event) => {
       String(nps),
       sujet_marquant || '',
       isRecontact ? 'Oui' : 'Non',
-      isRecontact ? (recontact_email || '') : '',
+      isRecontact ? (recontact_entreprise || '') : '',
       isRecontact ? (recontact_sujet || '') : '',
       commentaire || '',
     ];

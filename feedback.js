@@ -32,6 +32,7 @@
     insertBanner();
     transformInscriptionSection(villeKey, ville, dateLabel);
     hideRegistrationCTAs();
+    hideLieuBanner();
     maybeScrollToFeedback();
 
     if (typeof window.trackEvent === 'function') {
@@ -68,6 +69,11 @@
     document.querySelectorAll('a[href="#inscription"]').forEach(a => {
       a.style.display = 'none';
     });
+  }
+
+  function hideLieuBanner() {
+    const banner = document.getElementById('lieu-banner');
+    if (banner) banner.style.display = 'none';
   }
 
   // ─── SECTION INSCRIPTION → SECTION FEEDBACK ──────────────
@@ -129,8 +135,8 @@
           </div>
           <div class="feedback-recontact-fields">
             <div class="feedback-field">
-              <label>Votre email professionnel</label>
-              <input type="email" name="recontact_email" placeholder="prenom.nom@exemple.fr" />
+              <label>Nom de votre entreprise</label>
+              <input type="text" name="recontact_entreprise" placeholder="ex : Quadral, Seqens, Cosivia…" />
             </div>
             <div class="feedback-field">
               <label>Sur quel sujet précisément ?</label>
@@ -250,9 +256,9 @@
       note_ateliers:   fd.get('note_ateliers'),
       nps:             fd.get('nps'),
       sujet_marquant:  fd.get('sujet_marquant'),
-      recontact:       fd.get('recontact'),
-      recontact_email: fd.get('recontact_email'),
-      recontact_sujet: fd.get('recontact_sujet'),
+      recontact:            fd.get('recontact'),
+      recontact_entreprise: fd.get('recontact_entreprise'),
+      recontact_sujet:      fd.get('recontact_sujet'),
       commentaire:     fd.get('commentaire'),
     };
 
@@ -268,8 +274,8 @@
       errBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
       return;
     }
-    if (payload.recontact === 'oui' && !payload.recontact_email) {
-      errBox.textContent = 'Merci de renseigner votre email pour le recontact.';
+    if (payload.recontact === 'oui' && !payload.recontact_entreprise) {
+      errBox.textContent = 'Merci de renseigner le nom de votre entreprise.';
       errBox.hidden = false;
       errBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
       return;

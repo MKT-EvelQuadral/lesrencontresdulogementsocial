@@ -8,6 +8,8 @@ const SHEET_TAB = 'Feedback';
 const DECKS = {
   'le-havre': 'quadral-rls-lehavre.pdf',
   'paris':    'quadral-rls-paris.pdf',
+  'lyon':     'quadral-rls-lyon.pdf',
+  'annecy':   'quadral-rls-annecy.pdf',
 };
 
 const VILLE_LABELS = {

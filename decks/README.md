@@ -16,7 +16,8 @@ où `<slug>` correspond au slug de la ville utilisé dans les noms de pages
 
 ## Procédure pour ajouter un deck
 
-Quand le deck d'une ville est prêt à être mis en ligne, faire **deux** opérations :
+Quand le deck d'une ville est prêt à être mis en ligne, faire **trois**
+opérations (les deux mappings DOIVENT rester synchronisés) :
 
 ### 1. Uploader le PDF dans ce dossier
 
@@ -27,7 +28,7 @@ Recommandations :
 - Poids : < 10 Mo si possible (les decks actuels font ~8 Mo)
 - Pas d'espaces ni d'accents dans le nom de fichier
 
-### 2. Référencer le deck dans la Netlify Function
+### 2. Référencer le deck dans la Netlify Function (back-end)
 
 Éditer [`netlify/functions/feedback.js`](../netlify/functions/feedback.js) et
 ajouter une ligne dans la constante `DECKS` au début du fichier :
@@ -43,10 +44,37 @@ const DECKS = {
 };
 ```
 
-Sans cette ligne, le questionnaire de feedback se valide quand même mais
-n'affiche pas le bouton de téléchargement (la fonction n'envoie pas
-d'`downloadUrl` dans sa réponse). Le message "La présentation sera mise à
-disposition prochainement." s'affiche à la place.
+C'est ce mapping qui répond aux nouvelles soumissions de feedback.
+
+### 3. Référencer le deck dans `config.js` (front-end)
+
+Éditer [`config.js`](../config.js) et ajouter la même ligne dans la
+constante `DECKS_AVAILABLE` :
+
+```js
+const DECKS_AVAILABLE = {
+  'le-havre': 'quadral-rls-lehavre.pdf',
+  'paris':    'quadral-rls-paris.pdf',
+  'lyon':     'quadral-rls-lyon.pdf',
+  'annecy':   'quadral-rls-annecy.pdf',
+  // ↓ ajouter la nouvelle ville ici
+  'bordeaux': 'quadral-rls-bordeaux.pdf',
+};
+```
+
+C'est ce mapping qui permet aux personnes qui ont déjà soumis le
+questionnaire **avant** l'upload du deck de récupérer la présentation lors
+d'une visite ultérieure (sans avoir à vider leur localStorage).
+
+> ⚠️ Garde les deux mappings (`DECKS` back-end + `DECKS_AVAILABLE` front-end)
+> strictement identiques. Si l'un des deux manque, l'autre suffit dans la
+> plupart des cas, mais certains scénarios ne fonctionneront pas
+> (cf. tableau ci-dessous).
+
+| Cas | `DECKS` (back) seul | `DECKS_AVAILABLE` (front) seul | Les deux |
+|---|---|---|---|
+| Nouvelle soumission après upload | ✅ deck dispo | ✅ deck dispo | ✅ deck dispo |
+| Soumission AVANT upload, revisite après upload | ❌ "à disposition prochainement" | ✅ deck dispo | ✅ deck dispo |
 
 ## Comment ça marche côté utilisateur
 
@@ -64,9 +92,10 @@ disposition prochainement." s'affiche à la place.
 
 Pour mémoire, le slug de la ville apparaît aussi dans :
 
-- [`config.js`](../config.js) — `LIEUX_CONFIG` (lieu, adresse, date)
+- [`config.js`](../config.js) — `LIEUX_CONFIG` (lieu, adresse, date) et
+  `DECKS_AVAILABLE` (deck disponible côté front)
 - [`netlify/functions/feedback.js`](../netlify/functions/feedback.js) —
-  `VILLE_LABELS` et `DECKS`
+  `VILLE_LABELS` et `DECKS` (deck disponible côté back)
 - Le nom du fichier HTML de la page ville (`<slug>.html`)
 - Le nom du fichier image hero (`<slug>.webp`, exception : `lehavre.webp`)
 

@@ -17,12 +17,26 @@ const LIEUX_CONFIG = {
   'paris':      { nom: 'Quadral - 89 rue de Tocqueville', maps_url: 'https://maps.app.goo.gl/RGUVBkU1fY7Ms8h26', date_iso: '2026-05-19', adresse: '89 rue de Tocqueville, 75017 Paris' },
   'metz':       { nom: 'EVEL - 12 rue François de Curel', maps_url: 'https://maps.app.goo.gl/2it4udnbyEvDDAuz9', date_iso: null, adresse: '12 rue François de Curel, 57000 Metz' },
   'lyon':       { nom: 'GRAVITY', maps_url: 'https://maps.app.goo.gl/8eHjNRDrY5KTjdET6', date_iso: '2026-06-04', adresse: '1 rue de la croix Barret, LYON 7' },
-  'annecy':     { nom: 'Annecy CoWorking', maps_url: 'https://maps.app.goo.gl/ioGAmcQEovjksW6S7', date_iso: '2026-06-05', adresse: 'Parc Altaïs 16 rue de la Lyre – 74960 ANNECY' },
+  'annecy':     { nom: 'À venir', maps_url: '', date_iso: '2026-06-05', adresse: '' },
   'bordeaux':   { nom: 'Now Co-Working', maps_url: 'https://maps.app.goo.gl/DudvQL7SoMzJyDi66', date_iso: '2026-06-09', adresse: 'Bordeaux Village H15, Quai des Chartrons, 33300 Bordeaux' },
   'strasbourg': { nom: 'Now Co-Working', maps_url: 'https://maps.app.goo.gl/gv6KkWPXDFAzjX2dA', date_iso: '2026-06-18', adresse: '10 Pl. Gutenberg, 67000 Strasbourg' },
   'toulouse':   { nom: 'Now Co-Working', maps_url: 'https://maps.app.goo.gl/yXrvNA5S4fFKqw448', date_iso: '2026-06-23', adresse: '33 Piste des Géants, 31400 Toulouse' },
   'marseille':  { nom: 'Now Co-Working', maps_url: 'https://maps.app.goo.gl/rGEBktPPyFkx8JTg8', date_iso: '2026-06-24', adresse: '19 Quai de Rive Neuve, 13007 Marseille' },
   'lille':      { nom: 'Now Co-Working', maps_url: 'https://maps.app.goo.gl/RjzqjbsgR7rUWkL69', date_iso: '2026-06-30', adresse: 'Palais de la bourse, 40 Pl. du Théâtre, 59800 Lille' },
+};
+
+// ══════════════════════════════════════════════════════════════
+//  DECKS DISPONIBLES — Présentations PDF par ville
+//  Doit refléter la constante DECKS de netlify/functions/feedback.js.
+//  Ajouter une entrée ici quand le PDF est uploadé dans /decks/ pour que
+//  le bouton de téléchargement apparaisse sur la page (y compris pour
+//  les visiteurs qui ont rempli le questionnaire avant l'upload).
+// ══════════════════════════════════════════════════════════════
+const DECKS_AVAILABLE = {
+  'le-havre': 'quadral-rls-lehavre.pdf',
+  'paris':    'quadral-rls-paris.pdf',
+  'lyon':     'quadral-rls-lyon.pdf',
+  'annecy':   'quadral-rls-annecy.pdf',
 };
 
 // ══════════════════════════════════════════════════════════════

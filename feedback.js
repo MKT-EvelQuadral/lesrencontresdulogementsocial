@@ -95,7 +95,21 @@
     // Si feedback déjà soumis sur ce navigateur → afficher direct le bloc téléchargement
     const stored = readStorage(villeKey);
     if (stored && stored.submittedAt) {
-      wrap.innerHTML = buildSuccessHTML(ville, dateLabel, stored.downloadUrl, stored.downloadFilename, true);
+      // Si le cache n'a pas d'URL (feedback soumis avant l'upload du deck),
+      // re-vérifie la disponibilité actuelle via DECKS_AVAILABLE (config.js)
+      let url = stored.downloadUrl;
+      let filename = stored.downloadFilename;
+      if (!url && typeof DECKS_AVAILABLE !== 'undefined' && DECKS_AVAILABLE[villeKey]) {
+        url      = '/decks/' + DECKS_AVAILABLE[villeKey];
+        filename = 'Quadral RLS - ' + ville + '.pdf';
+        // Met à jour le cache pour les prochaines visites
+        writeStorage(villeKey, Object.assign({}, stored, {
+          downloadUrl:      url,
+          downloadFilename: filename,
+        }));
+      }
+      wrap.innerHTML = buildSuccessHTML(ville, dateLabel, url, filename, true);
+      attachDownloadTracking(wrap, villeKey);
       return;
     }
 

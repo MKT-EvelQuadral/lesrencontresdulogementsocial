@@ -25,17 +25,17 @@
     },
     {
       company: 'Antin Résidences',
-      logo:    '/testimonials/antin.svg',
+      logo:    '/testimonials/antin.png',
       quote:   'Je tiens à vous remercier pour l\'invitation et la matinée passée. Ce fut un plaisir d\'échanger sur les différents sujets abordés. J\'espère sincèrement que cette initiative sera renouvelée prochainement. Merci encore pour votre accueil.',
     },
     {
-      company: 'Vichy',
-      logo:    '/testimonials/vichy.svg',
+      company: 'Vichy Habitat',
+      logo:    '/testimonials/vichy.png',
       quote:   'Super accueil avec une équipe qui maitrise leurs sujets, très agréable et très intéressant.',
     },
     {
       company: 'SDH Access',
-      logo:    '/testimonials/sdaccess.svg',
+      logo:    '/testimonials/sdaccess.png',
       quote:   'Merci pour l\'invitation et la matinée très enrichissante.',
     },
   ];

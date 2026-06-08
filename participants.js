@@ -125,7 +125,7 @@
         align-items: center;
         gap: 3.5rem;
         width: max-content;
-        animation: participants-scroll 45s linear infinite;
+        animation: participants-scroll 18s linear infinite;
       }
       .participants-marquee:hover .participants-track,
       .participants-marquee:focus-within .participants-track {
@@ -159,7 +159,7 @@
       @media (max-width: 768px) {
         .participants-section { padding: 3rem 0 2.5rem; }
         .participants-header { margin-bottom: 2rem; }
-        .participants-track { gap: 2.5rem; animation-duration: 35s; }
+        .participants-track { gap: 2.5rem; animation-duration: 15s; }
         .participants-item { height: 56px; }
         .participants-logo { max-height: 48px; max-width: 130px; }
       }

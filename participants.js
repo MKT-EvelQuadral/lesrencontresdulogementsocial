@@ -53,13 +53,15 @@
     // Mélange aléatoire pour varier l'ordre d'affichage
     const shuffled = shuffle(PARTICIPANTS);
 
-    // On duplique la liste pour créer un défilement infini sans saut
+    // On duplique la liste pour créer un défilement infini sans saut.
+    // Pas de loading="lazy" ici : tous les logos doivent être chargés au
+    // démarrage pour stabiliser la largeur de la piste (sinon ça saute).
     const items = shuffled.concat(shuffled).map(p => `
       <li class="participants-item">
         <img class="participants-logo"
              src="${escAttr(p.logo)}"
              alt="${escAttr(p.name)}"
-             loading="lazy"
+             decoding="async"
              onerror="this.style.display='none'" />
       </li>
     `).join('');
@@ -127,12 +129,11 @@
         width: max-content;
         animation: participants-scroll 18s linear infinite;
       }
-      .participants-marquee:hover .participants-track,
-      .participants-marquee:focus-within .participants-track {
-        animation-play-state: paused;
-      }
+      /* Largeur fixe par item → la piste a la MÊME largeur avant et
+         après chargement des images, ce qui élimine les "sauts". */
       .participants-item {
-        flex: 0 0 auto;
+        flex: 0 0 180px;
+        width: 180px;
         height: 70px;
         display: flex;
         align-items: center;
@@ -146,8 +147,16 @@
         object-fit: contain;
         transition: transform 0.3s ease;
       }
-      .participants-logo:hover {
-        transform: scale(1.15);
+      /* Hover effects UNIQUEMENT sur appareils avec vrai pointeur (souris).
+         Sur tactile, le hover devient "sticky" au tap et bloque le carrousel. */
+      @media (hover: hover) and (pointer: fine) {
+        .participants-marquee:hover .participants-track,
+        .participants-marquee:focus-within .participants-track {
+          animation-play-state: paused;
+        }
+        .participants-logo:hover {
+          transform: scale(1.15);
+        }
       }
 
       @keyframes participants-scroll {
@@ -160,8 +169,18 @@
         .participants-section { padding: 3rem 0 2.5rem; }
         .participants-header { margin-bottom: 2rem; }
         .participants-track { gap: 2.5rem; animation-duration: 15s; }
-        .participants-item { height: 56px; }
+        .participants-item { flex: 0 0 140px; width: 140px; height: 56px; }
         .participants-logo { max-height: 48px; max-width: 130px; }
+        /* Aucune interaction tactile : le carrousel défile en continu */
+        .participants-marquee,
+        .participants-track,
+        .participants-item,
+        .participants-logo {
+          pointer-events: none;
+          user-select: none;
+          -webkit-user-select: none;
+          -webkit-touch-callout: none;
+        }
       }
 
       @media (prefers-reduced-motion: reduce) {

@@ -38,6 +38,7 @@ const DECKS_AVAILABLE = {
   'lyon':     'quadral-rls-lyon.pdf',
   'annecy':   'quadral-rls-annecy.pdf',
   'bordeaux': 'quadral-rls-bordeaux.pdf',
+  'strasbourg': 'quadral-rls-strasbourg.pdf',
 };
 
 // ══════════════════════════════════════════════════════════════

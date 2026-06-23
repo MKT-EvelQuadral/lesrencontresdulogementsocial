@@ -38,6 +38,11 @@
       logo:    '/testimonials/sdaccess.png',
       quote:   'Merci pour l\'invitation et la matinée très enrichissante.',
     },
+    {
+      company: 'Alteal',
+      logo:    '/participants/alteal.png',
+      quote:   'Ce fut des échanges constructifs, notamment les actions commerciales menées sur les locataires en place dans les résidences mises en vente.',
+    },
   ];
 
   const AUTO_ROTATE_MS = 4000;

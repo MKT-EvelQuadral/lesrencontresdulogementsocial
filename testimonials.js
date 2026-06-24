@@ -7,7 +7,8 @@
 //    (fond blanc)
 //
 //  Pour ajouter un nouveau témoignage : compléter le tableau
-//  TESTIMONIALS ci-dessous. Logo attendu dans /testimonials/.
+//  TESTIMONIALS ci-dessous. Logo attendu dans /participants/
+//  (dossier mutualisé avec le carrousel des participants).
 // ══════════════════════════════════════════════════════════════
 (function () {
   'use strict';
@@ -15,33 +16,38 @@
   const TESTIMONIALS = [
     {
       company: 'Seqens',
-      logo:    '/testimonials/Seqens.png',
+      logo:    '/participants/Seqens.png',
       quote:   'Merci à vous, c\'était avec plaisir. Très intéressants ces partages d\'informations et d\'expériences.',
     },
     {
       company: 'Cosivia',
-      logo:    '/testimonials/Cosivia.png',
+      logo:    '/participants/Cosivia.png',
       quote:   'Merci beaucoup pour l\'organisation de cette matinée. J\'ai apprécié les différents échanges et la qualité des interventions. Je reste attentif à la réception des présentations et suis bien entendu disponible pour un prochain rendez-vous.',
     },
     {
       company: 'Antin Résidences',
-      logo:    '/testimonials/antin.png',
+      logo:    '/participants/antin.png',
       quote:   'Je tiens à vous remercier pour l\'invitation et la matinée passée. Ce fut un plaisir d\'échanger sur les différents sujets abordés. J\'espère sincèrement que cette initiative sera renouvelée prochainement. Merci encore pour votre accueil.',
     },
     {
       company: 'Vichy Habitat',
-      logo:    '/testimonials/vichy.png',
+      logo:    '/participants/vichy.png',
       quote:   'Super accueil avec une équipe qui maitrise leurs sujets, très agréable et très intéressant.',
     },
     {
       company: 'SDH Access',
-      logo:    '/testimonials/sdaccess.png',
+      logo:    '/participants/sdaccess.png',
       quote:   'Merci pour l\'invitation et la matinée très enrichissante.',
     },
     {
       company: 'Alteal',
       logo:    '/participants/alteal.png',
       quote:   'Ce fut des échanges constructifs, notamment les actions commerciales menées sur les locataires en place dans les résidences mises en vente.',
+    },
+    {
+      company: '1001 Vies Habitat',
+      logo:    '/participants/1001vies.png',
+      quote:   'Je vous remercie pour la qualité des échanges et l\'accueil. C\'était une matinée très intéressante !',
     },
   ];
 

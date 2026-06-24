@@ -49,6 +49,11 @@
       logo:    '/participants/1001vies.png',
       quote:   'Je vous remercie pour la qualité des échanges et l\'accueil. C\'était une matinée très intéressante !',
     },
+    {
+      company: '3F Sud',
+      logo:    '/participants/3fsud.png',
+      quote:   'Rencontres riches de contenu et d\'échanges avec des ateliers intéressants en mode co-working. A renouveler l\'année prochaine. Merci.',
+    },
   ];
 
   const AUTO_ROTATE_MS = 4000;

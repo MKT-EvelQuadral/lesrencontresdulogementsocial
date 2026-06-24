@@ -12,6 +12,7 @@
   const PARTICIPANTS = [
     { name: '1001 Vies Habitat',        logo: '/participants/1001vies.png' },
     { name: '3F Normanvie',             logo: '/participants/3fnormanvie.png' },
+    { name: '3F Sud',                   logo: '/participants/3fsud.png' },
     { name: 'Alcéane',                  logo: '/participants/alceane.png' },
     { name: 'Alteal',                   logo: '/participants/alteal.png' },
     { name: 'Antin Résidences',         logo: '/participants/antin.png' },
@@ -19,6 +20,7 @@
     { name: 'Cosivia',                  logo: '/participants/Cosivia.png' },
     { name: 'Domial',                   logo: '/participants/domial.png' },
     { name: 'Domofrance',               logo: '/participants/domofrance.png' },
+    { name: 'Famille & Provence',       logo: '/participants/familleprovence.png' },
     { name: 'Grand Lyon Habitat',       logo: '/participants/grandlyon.png' },
     { name: 'Habitat 77',               logo: '/participants/habitat77.png' },
     { name: 'Habitat Lille',            logo: '/participants/habitatlill.png' },

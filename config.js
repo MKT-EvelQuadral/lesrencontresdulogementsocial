@@ -40,6 +40,7 @@ const DECKS_AVAILABLE = {
   'bordeaux': 'quadral-rls-bordeaux.pdf',
   'strasbourg': 'quadral-rls-strasbourg.pdf',
   'toulouse': 'quadral-rls-toulouse.pdf',
+  'marseille': 'quadral-rls-marseille.pdf',
 };
 
 // ══════════════════════════════════════════════════════════════

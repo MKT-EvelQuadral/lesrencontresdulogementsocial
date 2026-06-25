@@ -30,6 +30,11 @@
       quote:   'Je tiens à vous remercier pour l\'invitation et la matinée passée. Ce fut un plaisir d\'échanger sur les différents sujets abordés. J\'espère sincèrement que cette initiative sera renouvelée prochainement. Merci encore pour votre accueil.',
     },
     {
+      company: '1001 Vies Habitat',
+      logo:    '/participants/1001vies.png',
+      quote:   'Une rencontre inspirante et prospective sur les enjeux de demain, et une matinée riche en intelligence collective. Merci à Quadral pour ce moment.',
+    },
+    {
       company: 'Vichy Habitat',
       logo:    '/participants/vichy.png',
       quote:   'Super accueil avec une équipe qui maitrise leurs sujets, très agréable et très intéressant.',
@@ -43,11 +48,6 @@
       company: 'Alteal',
       logo:    '/participants/alteal.png',
       quote:   'Ce fut des échanges constructifs, notamment les actions commerciales menées sur les locataires en place dans les résidences mises en vente.',
-    },
-    {
-      company: '1001 Vies Habitat',
-      logo:    '/participants/1001vies.png',
-      quote:   'Une rencontre inspirante et prospective sur les enjeux de demain, et une matinée riche en intelligence collective. Merci à Quadral pour ce moment.',
     },
     {
       company: '3F Sud',

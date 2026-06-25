@@ -47,7 +47,7 @@
     {
       company: '1001 Vies Habitat',
       logo:    '/participants/1001vies.png',
-      quote:   'Je vous remercie pour la qualité des échanges et l\'accueil. C\'était une matinée très intéressante !',
+      quote:   'Une rencontre inspirante et prospective sur les enjeux de demain, et une matinée riche en intelligence collective. Merci à Quadral pour ce moment.',
     },
     {
       company: '3F Sud',

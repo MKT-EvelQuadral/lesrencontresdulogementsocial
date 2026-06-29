@@ -41,6 +41,7 @@ const DECKS_AVAILABLE = {
   'strasbourg': 'quadral-rls-strasbourg.pdf',
   'toulouse': 'quadral-rls-toulouse.pdf',
   'marseille': 'quadral-rls-marseille.pdf',
+  'lille': 'quadral-rls-lille.pdf',
 };
 
 // ══════════════════════════════════════════════════════════════

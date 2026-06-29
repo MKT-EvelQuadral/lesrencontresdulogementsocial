@@ -14,6 +14,7 @@ const DECKS = {
   'strasbourg': 'quadral-rls-strasbourg.pdf',
   'toulouse': 'quadral-rls-toulouse.pdf',
   'marseille': 'quadral-rls-marseille.pdf',
+  'lille': 'quadral-rls-lille.pdf',
 };
 
 const VILLE_LABELS = {

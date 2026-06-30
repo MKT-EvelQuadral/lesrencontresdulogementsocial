@@ -2,41 +2,37 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <!-- Preconnect tiers critiques (4 max) -->
+  <!-- Bascule de date : avant le 01/07/2026 (heure de Paris), on garde le site "tournée". -->
+  <script>(function(){var SWITCH=new Date('2026-07-01T00:00:00+02:00');if(new Date()<SWITCH){window.location.replace('/index-tournee.html');}})();</script>
+  <!-- Preconnect tiers critiques -->
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
   <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Preload image hero -->
   <link rel="preload" as="image" href="/hero-bg.webp" fetchpriority="high">
-  <!-- Google Fonts async -->
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap"></noscript>
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N3KW38LD');</script>
-<!-- End Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N3KW38LD');</script>
+  <!-- End Google Tag Manager -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Les Rencontres du Logement Social 2026 — Tournée nationale bailleurs sociaux</title>
-  <meta name="description" content="10 étapes en France de mai à juin 2026. Ateliers pratiques entre décideurs du logement social : arbitrage patrimonial, cessions HLM, gestion de parc, IA. Inscription gratuite." />
+  <title>Les Rencontres du Logement Social — Bilan de la tournée 2026 &amp; RDV 2027</title>
+  <meta name="description" content="Retour sur la tournée nationale des Rencontres du Logement Social : neuf villes, le bilan du terrain, et la préinscription à l'édition 2027." />
   <!-- Open Graph / Social previews -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Les Rencontres du Logement Social" />
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:url" content="https://www.lesrencontresdulogementsocial.fr/" />
-  <meta property="og:title" content="Les Rencontres du Logement Social 2026 — Tournée nationale bailleurs sociaux" />
-  <meta property="og:description" content="10 étapes en France de mai à juin 2026. Ateliers pratiques entre décideurs du logement social : arbitrage patrimonial, cessions HLM, gestion de parc, IA. Inscription gratuite." />
+  <meta property="og:title" content="Les Rencontres du Logement Social — Bilan 2026 &amp; RDV 2027" />
+  <meta property="og:description" content="Le bilan de la tournée nationale et la préinscription à l'édition 2027 des Rencontres du Logement Social." />
   <meta property="og:image" content="https://www.lesrencontresdulogementsocial.fr/og-default.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Les Rencontres du Logement Social — Tournée Quadral 2026" />
+  <meta property="og:image:alt" content="Les Rencontres du Logement Social — Quadral" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Les Rencontres du Logement Social 2026 — Tournée nationale bailleurs sociaux" />
-  <meta name="twitter:description" content="10 étapes en France de mai à juin 2026. Ateliers pratiques entre décideurs du logement social : arbitrage patrimonial, cessions HLM, gestion de parc, IA. Inscription gratuite." />
+  <meta name="twitter:title" content="Les Rencontres du Logement Social — Bilan 2026 &amp; RDV 2027" />
+  <meta name="twitter:description" content="Le bilan de la tournée nationale et la préinscription à l'édition 2027." />
   <meta name="twitter:image" content="https://www.lesrencontresdulogementsocial.fr/og-default.jpg" />
   <style>
     :root {
@@ -51,7 +47,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       --text-muted: #64748b;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: clip; }
     body {
       font-family: 'Roboto', system-ui, sans-serif;
       background: var(--navy);
@@ -59,6 +55,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
+    section { scroll-margin-top: 80px; }
 
     /* ===================== NAV ===================== */
     .nav {
@@ -68,7 +65,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       background: #0E1D4D;
       border-bottom: 1px solid rgba(255,255,255,0.06);
     }
-    .nav-logo img { height: 36px; width: auto; }
+    .nav-logo img { height: 36px; width: auto; display: block; }
+    .nav-actions { display: flex; align-items: center; gap: 1rem; }
     .nav-badge {
       font-family: 'Space Mono', monospace;
       font-size: 0.65rem; color: var(--pop);
@@ -76,904 +74,855 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       padding: 4px 10px; border-radius: 2px;
       letter-spacing: 0.12em; text-transform: uppercase;
     }
-    .nav-actions {
-      display: flex; align-items: center; gap: 1rem;
-    }
     .nav-link {
       display: inline-flex; align-items: center; gap: 0.5rem;
       font-family: 'Space Mono', monospace;
       font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase;
       color: white; text-decoration: none;
       border: 1px solid rgba(248,193,217,0.3);
-      padding: 6px 12px; border-radius: 2px;
-      transition: all 0.3s ease;
+      padding: 6px 12px; border-radius: 2px; transition: all 0.3s ease;
     }
-    .nav-link:hover {
-      background: var(--pop); color: var(--navy);
-      border-color: var(--pop);
-    }
+    .nav-link:hover { background: var(--pop); color: var(--navy); border-color: var(--pop); }
     .nav-link svg { width: 14px; height: 14px; flex-shrink: 0; }
-    .nav-linkedin-text { display: inline; }
     @media (max-width: 640px) {
       .nav { padding: 0 1rem; }
       .nav-actions { gap: 0.5rem; }
       .nav-logo img { height: 26px; }
       .nav-badge { display: none; }
-      .nav-linkedin-text { display: none; }
-      .nav-link.nav-linkedin { padding: 6px 8px; }
-      .nav-link.nav-team { padding: 6px 9px; font-size: 0.6rem; }
+      .nav-link { font-size: 0.6rem; padding: 6px 9px; letter-spacing: 0.08em; }
+      .nav-link svg { width: 16px; height: 16px; }
+      /* LinkedIn : icône seule sur mobile (on masque le libellé "Nous suivre") */
+      .nav-link span { display: none; }
     }
 
     /* ===================== HERO ===================== */
     .hero {
-      position: relative; min-height: 100vh;
+      position: relative; min-height: 92vh;
       display: flex; align-items: center; justify-content: center;
-      background: var(--navy); overflow: hidden;
+      padding: 8rem 2rem 5rem; overflow: hidden;
+      background: var(--navy);
     }
-    .hero-grid {
-      position: absolute; inset: 0; opacity: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px);
-      background-size: 60px 60px;
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('/hero-bg.webp');
+      background-size: cover; background-position: center; opacity: 0.15;
     }
     .hero-glow { position: absolute; border-radius: 50%; filter: blur(120px); }
-    .hero-glow-1 { background: var(--brand); width: 600px; height: 600px; top: -200px; right: -100px; opacity: 0.15; }
-    .hero-glow-2 { background: var(--pop); width: 600px; height: 600px; bottom: -200px; left: -100px; opacity: 0.08; }
-    .hero-glow-3 { background: var(--sky); width: 800px; height: 800px; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.06; }
-
-    .hero-content {
-      position: relative; z-index: 2; text-align: center;
-      padding: 2rem; max-width: 900px;
-    }
+    .hero-glow-1 { background: var(--brand); width: 600px; height: 600px; top: -200px; right: -100px; opacity: 0.18; }
+    .hero-glow-2 { background: var(--pop); width: 600px; height: 600px; bottom: -200px; left: -100px; opacity: 0.10; }
+    .hero-content { position: relative; text-align: center; max-width: 860px; }
     .hero-eyebrow {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
-      color: var(--pop); margin-bottom: 2rem;
-      opacity: 0; animation: fadeUp 0.8s 0.2s forwards;
+      font-family: 'Space Mono', monospace; font-size: 0.78rem;
+      letter-spacing: 0.16em; text-transform: uppercase; line-height: 1.9;
+      color: var(--pop); margin-bottom: 1.5rem;
+    }
+    @media (max-width: 640px) {
+      .hero-eyebrow { font-size: 0.68rem; letter-spacing: 0.12em; }
     }
     .hero-title {
       font-family: 'DM Serif Display', Georgia, serif;
-      font-size: clamp(2.5rem, 6vw, 5rem); color: white;
-      line-height: 1.05; margin-bottom: 1.5rem;
-      opacity: 0; animation: fadeUp 0.8s 0.4s forwards;
+      font-size: clamp(2.9rem, 6.5vw, 4.6rem); line-height: 1.1;
+      color: #fff; margin-bottom: 1.6rem;
     }
     .hero-title em { font-style: italic; color: var(--pop); }
     .hero-sub {
-      font-size: 1.15rem; color: rgba(255,255,255,0.55); font-weight: 300;
-      line-height: 1.7; max-width: 600px; margin: 0 auto 2.5rem;
-      opacity: 0; animation: fadeUp 0.8s 0.6s forwards;
+      font-size: clamp(1.2rem, 2.2vw, 1.55rem); color: rgba(255,255,255,0.88);
+      font-weight: 300; line-height: 1.5; max-width: 680px; margin: 0 auto 2.75rem;
     }
-    .hero-stats {
-      display: flex; gap: 3rem; justify-content: center; flex-wrap: wrap;
-      opacity: 0; animation: fadeUp 0.8s 0.8s forwards;
-    }
-    .hero-stat-number {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-size: 2.5rem; color: white;
-    }
-    .hero-stat-label {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase;
-      color: rgba(255,255,255,0.4); margin-top: 0.25rem;
-    }
-    .hero-cta {
-      display: inline-block; background: var(--pop); color: var(--navy);
-      font-weight: 600; font-size: 0.85rem; letter-spacing: 0.05em;
-      padding: 14px 36px; border-radius: 4px; text-decoration: none;
-      margin-top: 2.5rem;
-      transition: all 0.3s ease;
-      opacity: 0; animation: fadeUp 0.8s 1s forwards;
-    }
-    .hero-cta:hover {
-      background: white; transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-    }
-    .hero-scroll {
-      position: absolute; bottom: 2.5rem; left: 0; right: 0;
-      display: flex; justify-content: center;
-      opacity: 0; animation: fadeUp 0.8s 1.2s forwards;
-    }
-    .hero-scroll a {
-      display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
-      text-decoration: none;
-    }
-    .hero-scroll span {
-      font-family: 'Space Mono', monospace;
-      font-size: 1rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: rgba(255,255,255,1);
-    }
-    .hero-scroll-chevron {
-      width: 20px; height: 20px; border-right: 1.5px solid var(--pop);
-      border-bottom: 1.5px solid var(--pop); transform: rotate(45deg);
-      animation: chevronBounce 2s ease-in-out infinite;
-    }
-
-    /* ===================== VALUE PROP ===================== */
-    .value-section { padding: 6rem 2rem; background: var(--warm); }
-    .value-inner { max-width: 1100px; margin: 0 auto; }
-    .value-header { text-align: center; margin-bottom: 4rem; }
-    .value-eyebrow {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--brand); margin-bottom: 1rem;
-    }
-    .value-title {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-size: clamp(1.5rem, 3vw, 2.2rem); color: var(--navy);
-      max-width: 650px; margin: 0 auto; line-height: 1.3;
-    }
-    .value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-    @media (max-width: 768px) { .value-grid { grid-template-columns: 1fr; } }
-    .value-card {
-      padding: 2rem; border: 1px solid #e2e8f0; border-radius: 4px;
-      background: white; transition: all 0.3s ease; position: relative; overflow: hidden;
-    }
-    .value-card::before {
-      content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
-      background: var(--pop); transform: scaleX(0); transform-origin: left;
-      transition: transform 0.4s ease;
-    }
-    .value-card:hover::before { transform: scaleX(1); }
-    .value-card:hover {
-      border-color: var(--brand); transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(14,29,77,0.08);
-    }
-    .value-card-icon {
-      width: 40px; height: 40px; border-radius: 50%;
-      background: var(--navy); display: flex; align-items: center; justify-content: center;
-      margin-bottom: 1.25rem; font-size: 1rem; color: var(--pop);
-    }
-    .value-card-title {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-size: 1.1rem; color: var(--navy); margin-bottom: 0.75rem;
-    }
-    .value-card-text {
-      font-size: 0.875rem; color: var(--text-muted); line-height: 1.7; font-weight: 300;
-    }
-
-    /* ===================== VALUE PROSE ===================== */
-    .value-prose {
-      max-width: 750px; margin: 0 auto 3.5rem; text-align: left;
-    }
-    .value-prose-block { margin-bottom: 2.5rem; }
-    .value-prose-block:last-child { margin-bottom: 0; }
-    .value-prose-subtitle {
-      display: flex; align-items: baseline; gap: 0.85rem;
-      margin-bottom: 0.85rem;
-    }
-    .value-prose-num {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.7rem; letter-spacing: 0.18em;
-      color: var(--brand); flex-shrink: 0; font-weight: 700;
-    }
-    .value-prose-h3 {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-size: 1.2rem; color: var(--navy); line-height: 1.3;
-      font-weight: normal;
-    }
-    .value-prose p {
-      font-size: 0.92rem; color: var(--text-muted); line-height: 1.8;
-      font-weight: 300; margin-bottom: 1.25rem;
-    }
-    .value-prose p:last-child { margin-bottom: 0; }
-
-    .value-scroll {
-      display: flex; justify-content: center; margin-top: 3rem;
-    }
-    .value-scroll a {
-      display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
-      text-decoration: none;
-    }
-    .value-scroll span {
-      font-family: 'Space Mono', monospace;
-      font-size: 1rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--brand);
-      animation: textBounce 2s ease-in-out infinite;
-    }
-    .value-scroll-chevron {
-      width: 20px; height: 20px; border-right: 1.5px solid var(--pop);
-      border-bottom: 1.5px solid var(--pop); transform: rotate(45deg);
-    }
-    @keyframes textBounce {
-      0%, 100% { translate: 0 0; opacity: 0.4; }
-      50%      { translate: 0 -6px; opacity: 1; }
-    }
-
-    /* ===================== CITIES ===================== */
-    .cities-section { padding: 6rem 2rem; background: var(--navy); position: relative; }
-    .cities-section .hero-grid { opacity: 0; background-size: 40px 40px; }
-    .cities-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 2; }
-    .cities-header { text-align: center; margin-bottom: 4rem; }
-    .cities-eyebrow {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--pop); margin-bottom: 1rem;
-    }
-    .cities-title {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-size: clamp(1.5rem, 3vw, 2.2rem); color: white; margin-bottom: 0.75rem;
-    }
-    .cities-sub { color: rgba(255,255,255,0.45); font-weight: 300; font-size: 0.95rem; }
-    .city-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
-    @media (max-width: 1024px) { .city-grid { grid-template-columns: repeat(3, 1fr); } }
-    @media (max-width: 768px)  { .city-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 480px)  { .city-grid { grid-template-columns: 1fr; } }
-    .city-card {
-      position: relative; border-radius: 6px; overflow: hidden;
-      cursor: pointer; text-decoration: none; display: block;
-      aspect-ratio: 4/3; background: var(--navy-light);
-      border: 1px solid rgba(255,255,255,0.06);
-      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-    .city-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
-      border-color: var(--pop);
-    }
-    .city-card-bg {
-      position: absolute; inset: 0;
-      background-size: cover; background-position: center;
-      transition: opacity 0.4s ease, transform 0.5s ease;
-    }
-    .city-card:hover .city-card-bg { opacity: 0.9 !important; transform: scale(1.05); }
-    .city-card-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(14,29,77,0.95) 0%, rgba(14,29,77,0.4) 50%, rgba(14,29,77,0.2) 100%);
-    }
-    .city-card-content {
-      position: relative; z-index: 2; height: 100%;
-      display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem;
-    }
-    .city-card-number {
-      position: absolute; top: 1rem; right: 1rem;
-      font-family: 'Space Mono', monospace;
-      font-size: 0.6rem; color: rgba(255,255,255,0.25); letter-spacing: 0.1em;
-    }
-    .city-card-date {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
-      color: var(--pop); margin-bottom: 0.4rem;
-    }
-    .city-card-name {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-size: 1.5rem; color: white; margin-bottom: 0.75rem; line-height: 1.1;
-    }
-    .city-card-cta {
+    .hero-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn {
       display: inline-flex; align-items: center; gap: 0.5rem;
-      font-size: 0.75rem; font-weight: 500; color: var(--pop);
-      letter-spacing: 0.05em; transition: gap 0.3s ease;
+      font-family: 'Space Mono', monospace; font-size: 0.82rem;
+      letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700;
+      padding: 16px 32px; border-radius: 4px; text-decoration: none;
+      cursor: pointer; border: 1px solid transparent; transition: all 0.25s ease;
     }
-    .city-card:hover .city-card-cta { gap: 0.85rem; }
-    .city-card-cta-arrow { display: inline-block; transition: transform 0.3s ease; }
-    .city-card:hover .city-card-cta-arrow { transform: translateX(4px); }
-    .city-card::after {
-      content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px;
-      background: var(--pop); transform: scaleX(0); transform-origin: left;
-      transition: transform 0.4s ease;
-    }
-    .city-card:hover::after { transform: scaleX(1); }
+    .btn-primary { background: var(--pop); color: var(--navy); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(248,193,217,0.3); }
+    .btn-ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,0.35); }
+    .btn-ghost:hover { background: #fff; color: var(--navy); border-color: #fff; }
 
-    /* Carte d'un événement passé : grisée, non cliquable */
-    .city-card.city-card-past {
-      cursor: default; opacity: 0.5; filter: grayscale(0.7);
-    }
-    .city-card.city-card-past:hover {
-      transform: none; box-shadow: none; border-color: rgba(255,255,255,0.06);
-    }
-    .city-card.city-card-past:hover .city-card-bg { opacity: 0.35 !important; transform: none; }
-    .city-card.city-card-past::after { display: none; }
-    .city-card.city-card-past .city-card-date {
-      color: rgba(255,255,255,0.7);
-      border: 1px solid rgba(255,255,255,0.25);
-      padding: 3px 8px; border-radius: 2px;
-      align-self: flex-start;
-      font-weight: 700;
-    }
-
-    /* ===================== PROGRAMME ===================== */
-    .programme-section { padding: 6rem 2rem; background: var(--warm); }
-    .programme-inner { max-width: 800px; margin: 0 auto; }
-    .programme-header { text-align: center; margin-bottom: 3rem; }
-    .programme-eyebrow {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+    /* ===================== SECTIONS GÉNÉRIQUES ===================== */
+    .section { padding: 5.5rem 2rem; }
+    .section--white { background: #fff; }
+    .section--warm { background: var(--warm); }
+    .section--navy { background: var(--navy); color: #fff; }
+    .section-inner { max-width: 1150px; margin: 0 auto; }
+    .section-header { text-align: center; margin-bottom: 3rem; }
+    .eyebrow {
+      font-family: 'Space Mono', monospace; font-size: 0.65rem;
+      letter-spacing: 0.2em; text-transform: uppercase;
       color: var(--brand); margin-bottom: 1rem;
     }
-    .programme-title {
+    .section--navy .eyebrow { color: var(--pop); }
+    .section-title {
       font-family: 'DM Serif Display', Georgia, serif;
-      font-size: clamp(1.5rem, 3vw, 2rem); color: var(--navy);
+      font-size: clamp(1.7rem, 3.5vw, 2.6rem); color: var(--navy);
+      line-height: 1.2; margin-bottom: 1rem;
     }
-    .programme-sub {
-      color: var(--text-muted); font-weight: 300; font-size: 0.95rem;
-      line-height: 1.6; max-width: 600px; margin: 0.75rem auto 0;
+    .section--navy .section-title { color: #fff; }
+    .section-title .hi { color: var(--pop); }
+    .section-sub {
+      color: var(--text-muted); font-weight: 300; font-size: 1.05rem;
+      line-height: 1.6; max-width: 680px; margin: 0 auto;
     }
-    .timeline { position: relative; padding-left: 3rem; }
-    .timeline::before {
-      content: ''; position: absolute; top: 0; left: 11px; bottom: 0;
-      width: 1px; background: linear-gradient(to bottom, var(--brand), var(--pop), transparent);
+    .section--navy .section-sub { color: rgba(255,255,255,0.8); }
+
+    /* ===================== REMERCIEMENT — logos statiques ===================== */
+    .thanks-logos {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 1.5rem 1rem; align-items: center;
+      margin-bottom: 4.5rem;
     }
-    .timeline-item { position: relative; margin-bottom: 2rem; }
-    .timeline-dot {
-      position: absolute; left: -3rem; top: 0.25rem;
-      width: 23px; height: 23px; border-radius: 50%;
-      background: var(--warm); border: 2px solid var(--brand);
+    .thanks-logo-item {
+      height: 80px; flex: 0 0 150px;
       display: flex; align-items: center; justify-content: center;
+      padding: 0.5rem;
     }
-    .timeline-dot.highlight {
-      background: var(--navy); border-color: var(--navy);
-      outline: 2px solid rgba(40,65,129,0.3); outline-offset: 2px;
+    .thanks-logo-item img {
+      max-height: 64px; max-width: 140px; width: auto; height: auto;
+      object-fit: contain; transition: transform 0.3s ease;
     }
-    .timeline-dot-inner { width: 7px; height: 7px; border-radius: 50%; background: var(--pop); }
-    .timeline-card {
-      padding: 1.5rem; background: white; border: 1px solid #e8e8e4;
-      border-radius: 4px; transition: box-shadow 0.3s;
+    .thanks-logo-item img:hover { transform: scale(1.08); }
+    @media (max-width: 640px) {
+      .thanks-logos { gap: 1rem 0.5rem; }
+      .thanks-logo-item { flex: 0 0 30%; height: 64px; padding: 0.25rem; }
+      .thanks-logo-item img { max-width: 100%; max-height: 52px; }
     }
-    .timeline-card:hover { box-shadow: 0 6px 20px rgba(14,29,77,0.06); }
-    .timeline-card.highlight {
-      background: var(--navy); border-color: rgba(40,65,129,0.4);
-      box-shadow: 0 8px 30px rgba(14,29,77,0.15);
-    }
-    .timeline-time {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.8rem; letter-spacing: 0.12em; color: var(--sky);
-      text-transform: uppercase; margin-bottom: 0.35rem; font-weight: 700;
-    }
-    .timeline-label {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-size: 1.05rem; color: var(--navy); margin-bottom: 0.3rem;
-    }
-    .timeline-card.highlight .timeline-label { color: white; }
-    .timeline-desc {
-      font-size: 0.8rem; color: var(--text-muted); font-weight: 300; line-height: 1.6;
-    }
-    .timeline-card.highlight .timeline-desc { color: rgba(255,255,255,0.55); }
-    .timeline-link {
-      display: inline-block; margin-top: 0.75rem; font-size: 0.8rem;
-      font-weight: 600; color: var(--pop); text-decoration: none;
-    }
-    .timeline-link:hover { opacity: 0.8; }
 
-    /* ===================== CTA ===================== */
-    .cta-section {
-      padding: 5rem 2rem; background: var(--warm);
-      text-align: center; position: relative; overflow: hidden;
+    /* ===================== TÉMOIGNAGES — design exact (3 cartes + flèches) ===================== */
+    .testi-subhead { text-align: center; margin-bottom: 2.5rem; }
+    .testi-subhead .eyebrow { margin-bottom: 0; }
+
+    .testi-carousel { position: relative; max-width: 980px; margin: 0 auto; outline: none; }
+    .testi-stage { position: relative; height: 360px; }
+    .testi-card {
+      position: absolute; top: 0; left: 50%;
+      width: 460px; max-width: 90vw;
+      background: #fff; border-radius: 8px;
+      padding: 2.25rem 2rem 2rem;
+      box-shadow: 0 8px 32px rgba(14,29,77,0.08);
+      border: 1px solid #eef1f5;
+      transform: translateX(-50%);
+      transition: transform 0.5s cubic-bezier(0.4,0,0.2,1),
+                  opacity 0.5s cubic-bezier(0.4,0,0.2,1),
+                  filter 0.5s cubic-bezier(0.4,0,0.2,1);
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+      height: 100%; box-sizing: border-box;
     }
-    .cta-inner { position: relative; z-index: 2; max-width: 600px; margin: 0 auto; }
-    .cta-title {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-size: clamp(1.5rem, 3vw, 2rem); color: var(--navy); margin-bottom: 1rem;
+    .testi-card.is-current { z-index: 3; transform: translateX(-50%) scale(1); opacity: 1; filter: none; }
+    .testi-card.is-prev { z-index: 2; transform: translateX(calc(-50% - 320px)) scale(0.86); opacity: 0.45; filter: saturate(0.7); pointer-events: none; }
+    .testi-card.is-next { z-index: 2; transform: translateX(calc(-50% + 320px)) scale(0.86); opacity: 0.45; filter: saturate(0.7); pointer-events: none; }
+    .testi-card.is-hidden { z-index: 1; transform: translateX(-50%) scale(0.86); opacity: 0; pointer-events: none; }
+
+    .testi-logo-wrap { height: 56px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.875rem; }
+    .testi-logo { max-height: 56px; max-width: 180px; object-fit: contain; display: block; }
+    .testi-quote {
+      font-family: 'DM Serif Display', Georgia, serif; font-style: italic;
+      font-size: 1.05rem; line-height: 1.55; color: #1e293b;
+      margin: 0 0 1.5rem; flex: 1; position: relative; padding: 0.625rem 0.5rem 0;
     }
-    .cta-text {
-      color: var(--text-muted); font-weight: 300; margin-bottom: 2rem;
-      font-size: 0.95rem; line-height: 1.6;
+    .testi-quote-mark {
+      position: absolute; top: -1.5rem; left: 50%; transform: translateX(-50%);
+      font-family: 'DM Serif Display', Georgia, serif; font-style: normal;
+      font-size: 3.5rem; color: var(--pop); line-height: 1;
     }
-    .cta-button {
-      display: inline-block; background: var(--pop); color: var(--navy);
-      font-weight: 600; font-size: 0.85rem; letter-spacing: 0.05em;
-      padding: 14px 36px; border-radius: 4px; text-decoration: none;
-      transition: all 0.3s ease;
-      border: 1px solid var(--pop);
+    .testi-author {
+      font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--brand); font-weight: 700; margin-top: auto;
     }
-    .cta-button:hover {
-      background: var(--navy); color: white; transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(14,29,77,0.15);
-      border-color: var(--navy);
+    .testi-arrow {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: #fff; border: 1px solid #e2e8f0; border-radius: 50%;
+      width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
+      cursor: pointer; color: var(--navy); transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(14,29,77,0.08); z-index: 5; padding: 0;
     }
-    .cta-buttons {
-      display: flex; gap: 1rem; justify-content: center;
-      flex-wrap: wrap; align-items: center;
+    .testi-arrow:hover { background: var(--navy); color: #fff; border-color: var(--navy); transform: translateY(-50%) scale(1.05); }
+    .testi-arrow svg { width: 18px; height: 18px; }
+    .testi-arrow--prev { left: 0.5rem; }
+    .testi-arrow--next { right: 0.5rem; }
+    .testi-dots { display: flex; justify-content: center; gap: 0.5rem; margin-top: 1.75rem; }
+    .testi-dot { width: 10px; height: 10px; border-radius: 50%; background: #cbd5e1; border: none; padding: 0; cursor: pointer; transition: all 0.25s ease; }
+    .testi-dot:hover { background: #94a3b8; }
+    .testi-dot.is-active { background: var(--navy); width: 28px; border-radius: 5px; }
+    @media (max-width: 768px) {
+      .testi-stage { height: 420px; overflow: hidden; }
+      .testi-card { width: 100%; padding: 2rem 1.5rem 1.5rem; }
+      /* On recentre les cartes prev/next (pas de décalage ±320px) pour éviter
+         tout débordement horizontal et les sauts de scroll sur mobile. */
+      .testi-card.is-prev, .testi-card.is-next {
+        opacity: 0; pointer-events: none;
+        transform: translateX(-50%) scale(0.86);
+      }
+      .testi-arrow--prev { left: -0.25rem; }
+      .testi-arrow--next { right: -0.25rem; }
     }
-    .cta-button-secondary {
-      background: transparent; color: var(--navy);
-      border: 1px solid var(--navy);
+    @media (max-width: 480px) { .testi-stage { height: 460px; } .testi-quote { font-size: 1rem; } }
+
+    /* ===================== BILAN — carousel de cards (sans barre de scroll) ===================== */
+    .bilan-carousel {
+      position: relative; width: 80vw; max-width: 1400px;
+      margin-left: 50%; transform: translateX(-50%); /* breakout centré viewport */
+      display: flex; flex-direction: column;
+    }
+    .bilan-track {
+      display: flex; gap: 1.5rem; overflow-x: auto; scroll-snap-type: x mandatory;
+      padding: 0.5rem 0.25rem 1.5rem;
+      scrollbar-width: none; -ms-overflow-style: none;
+      --fade: 44px;
+      /* Au repos : fondu à droite uniquement → carte 1 (à gauche) jamais touchée. */
+      -webkit-mask-image: linear-gradient(to right, #000 calc(100% - var(--fade)), transparent 100%);
+              mask-image: linear-gradient(to right, #000 calc(100% - var(--fade)), transparent 100%);
+    }
+    /* Dès qu'on défile : fondu aussi à gauche (plus de coupure nette). */
+    .bilan-track.scrolled {
+      -webkit-mask-image: linear-gradient(to right, transparent 0, #000 var(--fade), #000 calc(100% - var(--fade)), transparent 100%);
+              mask-image: linear-gradient(to right, transparent 0, #000 var(--fade), #000 calc(100% - var(--fade)), transparent 100%);
+    }
+    /* Tout à droite : on enlève le fondu de droite (dernière carte nette). */
+    .bilan-track.scrolled.at-end {
+      -webkit-mask-image: linear-gradient(to right, transparent 0, #000 var(--fade), #000 100%);
+              mask-image: linear-gradient(to right, transparent 0, #000 var(--fade), #000 100%);
+    }
+    .bilan-track::-webkit-scrollbar { display: none; height: 0; }
+    .bilan-card {
+      scroll-snap-align: center; flex: 0 0 390px; max-width: 88vw;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px; padding: 2.4rem 2.1rem; min-height: 400px;
+      display: flex; flex-direction: column;
+    }
+    .bilan-card-num {
+      font-family: 'Space Mono', monospace; font-size: 0.8rem; letter-spacing: 0.15em;
+      color: var(--pop); margin-bottom: 0.6rem; text-align: right;
+    }
+    .bilan-card-emoji { font-size: 2rem; line-height: 1; margin-bottom: 0.9rem; }
+    .bilan-card-title {
+      font-family: 'DM Serif Display', Georgia, serif; font-size: 1.55rem;
+      color: #fff; line-height: 1.25; margin-bottom: 1.1rem;
+    }
+    .bilan-card-title .hi { color: var(--pop); }
+    .bilan-card-text { color: rgba(255,255,255,0.7); font-weight: 300; line-height: 1.65; font-size: 1rem; }
+    .bilan-card-text .bilan-card-thanks { display: inline-block; color: #fff; font-weight: 600; }
+    .bilan-card-placeholder {
+      margin-top: auto; font-family: 'Space Mono', monospace; font-size: 0.62rem;
+      letter-spacing: 0.1em; text-transform: uppercase; color: rgba(248,193,217,0.6);
+      border-top: 1px dashed rgba(255,255,255,0.15); padding-top: 1rem;
+    }
+    .bilan-arrows { order: -1; display: flex; justify-content: center; gap: 1rem; margin: 0 0 1.5rem; }
+    .bilan-arrow {
+      width: 44px; height: 44px; border-radius: 50%; cursor: pointer;
+      background: transparent; border: 1px solid rgba(255,255,255,0.3); color: #fff;
+      display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;
+    }
+    .bilan-arrow:hover { background: var(--pop); color: var(--navy); border-color: var(--pop); }
+    .bilan-arrow svg { width: 18px; height: 18px; }
+    .bilan-cta-wrap { text-align: center; margin-top: 2.5rem; }
+    .bilan-cta {
       display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--pop); color: var(--navy); text-decoration: none;
+      font-family: 'Space Mono', monospace; font-size: 0.8rem; letter-spacing: 0.06em;
+      text-transform: uppercase; font-weight: 700; padding: 14px 28px; border-radius: 6px;
+      transition: all 0.2s ease;
     }
-    .cta-button-secondary:hover {
-      background: var(--navy); color: white;
-      border-color: var(--navy);
+    .bilan-cta:hover { background: #fff; transform: translateY(-1px); }
+    @media (max-width: 768px) {
+      /* Conteneur = 90vw, carte = 100% du conteneur → 1 seule carte visible, entière,
+         pas de voisin coupé. Centré dans le viewport (5vw de marge de chaque côté). */
+      .bilan-carousel { width: 90vw; max-width: 90vw; }
+      .bilan-card { flex: 0 0 100%; max-width: 100%; }
+      /* Pas de fondu sur mobile (sinon ça rognerait l'unique carte) */
+      .bilan-track { -webkit-mask-image: none !important; mask-image: none !important; }
     }
-    .cta-button-secondary svg { width: 14px; height: 14px; flex-shrink: 0; }
 
-    /* ===================== TEAM ===================== */
-    .team-section {
-      padding: 5rem 2rem 6rem;
-      background: var(--warm);
-      border-top: 1px solid #e8e8e4;
+    /* ===================== ENTREPRISE — pills + fiches ===================== */
+    .pills { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin-bottom: 3rem; }
+    .pill {
+      font-family: 'Roboto', system-ui, sans-serif; font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 9px 18px; border-radius: 100px; cursor: pointer;
+      background: #fff; color: var(--brand); border: 1px solid #d6deea; transition: all 0.2s ease;
     }
-    .team-inner { max-width: 1200px; margin: 0 auto; }
-    .team-header { text-align: center; margin-bottom: 3.5rem; }
-    .team-eyebrow {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--brand); margin-bottom: 1rem;
-    }
-    .team-title {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-size: clamp(1.5rem, 3vw, 2.2rem); color: var(--navy);
-      margin-bottom: 0.75rem;
-    }
-    .team-sub {
-      color: var(--text-muted); font-weight: 300;
-      font-size: 0.95rem; max-width: 560px; margin: 0 auto;
-    }
+    .pill:hover { border-color: var(--brand); }
+    .pill.is-active { background: var(--navy); color: #fff; border-color: var(--navy); }
     .team-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+      gap: 1.5rem; max-width: 1150px; margin: 0 auto;
+      align-items: stretch;
     }
-    @media (max-width: 1024px) { .team-grid { grid-template-columns: repeat(3, 1fr); } }
-    @media (max-width: 768px)  { .team-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 480px)  { .team-grid { grid-template-columns: 1fr; } }
+    .team-scroller { position: relative; }
+    /* Flèches du défileur équipe (mobile uniquement) */
+    .team-arrows { display: none; justify-content: center; gap: 1rem; margin-top: 1.5rem; }
+    .team-arrow {
+      width: 44px; height: 44px; border-radius: 50%; cursor: pointer;
+      background: #fff; border: 1px solid #d6deea; color: var(--navy);
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(14,29,77,0.06);
+    }
+    .team-arrow:hover { background: var(--navy); color: #fff; border-color: var(--navy); }
+    .team-arrow svg { width: 18px; height: 18px; }
     .team-card {
-      background: white;
-      border: 1px solid #e2e8f0;
-      border-radius: 4px;
-      padding: 1.5rem;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      overflow: hidden;
-      transition: all 0.3s ease;
-    }
-    .team-card::before {
-      content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
-      background: var(--pop); transform: scaleX(0); transform-origin: left;
-      transition: transform 0.4s ease;
-    }
-    .team-card:hover::before { transform: scaleX(1); }
-    .team-card:hover {
-      border-color: var(--brand);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(14,29,77,0.08);
+      background: #fff; border: 1px solid #eef1f5; border-radius: 10px;
+      padding: 1.75rem 1.5rem; text-align: center;
+      box-shadow: 0 4px 20px rgba(14,29,77,0.05);
+      display: flex; flex-direction: column; height: 100%;
     }
     .team-photo {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      border-radius: 4px;
-      margin-bottom: 1.25rem;
-      background: #f1f5f9;
-      display: block;
+      width: 110px; height: 110px; border-radius: 50%; object-fit: cover;
+      margin: 0 auto 1rem; display: block; border: 3px solid var(--warm);
     }
     .team-name {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-size: 1.15rem;
-      color: var(--navy);
-      line-height: 1.2;
-      margin-bottom: 0.5rem;
+      font-family: 'DM Serif Display', Georgia, serif; font-size: 1.2rem;
+      color: var(--navy); margin-bottom: 0.5rem;
     }
-    .team-positions {
-      margin-bottom: 1.25rem;
+    .team-positions { min-height: 48px; }
+    .team-position { margin-bottom: 0.35rem; }
+    .team-role { font-size: 0.85rem; color: var(--text); font-weight: 500; }
+    .team-company { font-size: 0.78rem; color: var(--text-muted); }
+    .team-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; justify-content: center; margin: 0.85rem 0 1.1rem; }
+    .team-tag {
+      font-family: 'Space Mono', monospace; font-size: 0.58rem; letter-spacing: 0.04em;
+      background: var(--warm); color: var(--brand); padding: 3px 8px; border-radius: 3px;
     }
-    .team-position {
-      margin-bottom: 0.7rem;
+    /* Bloc coordonnées (desktop, repliable) */
+    .team-coords {
+      display: none; margin: 0.25rem 0 1rem; font-size: 0.82rem; line-height: 1.6;
     }
-    .team-position:last-child {
-      margin-bottom: 0;
+    .team-coords.open { display: block; }
+    .team-coords a { color: var(--brand); text-decoration: none; }
+    .team-coords a:hover { text-decoration: underline; }
+
+    .team-actions { display: flex; gap: 0.5rem; justify-content: center; align-items: center; margin-top: auto; }
+    .team-coords-btn, .team-vcard-btn {
+      font-family: 'Roboto', system-ui, sans-serif; font-size: 0.82rem; font-weight: 500;
+      background: var(--pop); color: var(--navy); border: 1px solid var(--pop);
+      padding: 9px 16px; border-radius: 4px; cursor: pointer; transition: all 0.2s ease;
     }
-    .team-position + .team-position {
-      padding-top: 0.65rem;
-      border-top: 1px solid #eef1f5;
-    }
-    .team-role {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      font-weight: 400;
-      line-height: 1.4;
-      margin-bottom: 0.25rem;
-    }
-    .team-company {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.62rem;
-      letter-spacing: 0.08em;
-      color: #5FA6DB;
-      text-transform: uppercase;
-      line-height: 1.4;
-    }
-    .team-actions {
-      margin-top: auto;
-      display: flex;
-      gap: 0.4rem;
-      align-items: stretch;
-      justify-content: center;
-    }
-    .team-vcard-btn {
-      flex: 1;
-      background: transparent;
-      color: var(--navy);
-      border: 1px solid var(--navy);
-      font-family: inherit;
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      padding: 9px 10px;
-      border-radius: 3px;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      white-space: nowrap;
-    }
-    .team-vcard-btn:hover {
-      background: var(--navy);
-      color: white;
-    }
+    .team-coords-btn:hover, .team-vcard-btn:hover { background: var(--navy); color: #fff; border-color: var(--navy); }
     .team-linkedin-btn {
-      flex-shrink: 0;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 34px;
-      border: 1px solid var(--navy);
-      border-radius: 3px;
-      color: var(--navy);
-      text-decoration: none;
-      transition: all 0.25s ease;
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 38px; height: 38px; border-radius: 4px; border: 1px solid #d6deea;
+      color: var(--brand); transition: all 0.2s ease; flex-shrink: 0;
     }
-    .team-linkedin-btn:hover {
-      background: var(--navy);
-      color: white;
+    .team-linkedin-btn:hover { background: var(--brand); color: #fff; border-color: var(--brand); }
+    .team-linkedin-btn svg { width: 16px; height: 16px; }
+    /* Desktop : "Voir les coordonnées" ; Mobile : "Ajouter la fiche" */
+    .team-vcard-btn { display: none; }
+    .team-coords-btn { display: inline-flex; }
+    @media (max-width: 768px) {
+      .team-vcard-btn { display: inline-flex; }
+      .team-coords-btn { display: none; }
+      .team-coords { display: none !important; }
+      /* Profils en scroll horizontal (1 carte + aperçu de la suivante) + flèches */
+      .team-grid {
+        display: flex; grid-template-columns: none; max-width: 100%;
+        overflow-x: auto; scroll-snap-type: x mandatory;
+        gap: 1rem; padding-bottom: 0.25rem;
+        scrollbar-width: none; -ms-overflow-style: none;
+      }
+      .team-grid::-webkit-scrollbar { display: none; }
+      .team-card { flex: 0 0 80vw; max-width: 80vw; scroll-snap-align: center; }
+      /* Flèches en overlay, uniquement si plusieurs fiches (classe .multi) */
+      .team-scroller.multi .team-arrows { display: contents; }
+      .team-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 5; }
+      .team-arrow:hover { transform: translateY(-50%); }
+      #teamPrev { left: -0.25rem; }
+      #teamNext { right: -0.25rem; }
     }
-    .team-linkedin-btn svg { width: 14px; height: 14px; }
+
+    /* ===================== FORMULAIRE 2027 ===================== */
+    .form-box {
+      max-width: 640px; margin: 0 auto; background: var(--pop); border-radius: 12px;
+      padding: 2.5rem 2.25rem; box-shadow: 0 12px 40px rgba(14,29,77,0.12);
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-field { margin-bottom: 1.1rem; }
+    .form-field label {
+      display: block; font-size: 0.82rem; color: var(--navy); font-weight: 500;
+      margin-bottom: 0.4rem;
+    }
+    .form-field .req { color: #dc2626; }
+    .form-field input, .form-field select, .form-field textarea {
+      width: 100%; padding: 0.75rem 0.9rem; border: 1px solid #cbd5e1; border-radius: 6px;
+      font-family: inherit; font-size: 0.92rem; color: var(--navy); background: #fff; resize: vertical;
+    }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+      outline: none; border-color: var(--brand);
+    }
+    .form-submit {
+      width: 100%; margin-top: 0.5rem; background: var(--navy); color: #fff;
+      font-family: 'Space Mono', monospace; font-size: 0.8rem; letter-spacing: 0.06em;
+      text-transform: uppercase; font-weight: 700; padding: 15px; border: none;
+      border-radius: 6px; cursor: pointer; transition: all 0.2s ease;
+    }
+    .form-submit:hover { background: var(--brand); transform: translateY(-1px); }
+    .form-success { text-align: center; padding: 2rem 1rem; }
+    .form-success-icon {
+      width: 60px; height: 60px; border-radius: 50%; background: #16a34a; color: #fff;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 1.8rem; margin-bottom: 1rem;
+    }
+    .form-success h3 { font-family: 'DM Serif Display', Georgia, serif; color: var(--navy); font-size: 1.4rem; margin-bottom: 0.5rem; }
+    .form-success p { color: var(--text-muted); }
+    @media (max-width: 640px) {
+      .form-box {
+        padding: 1.6rem 1.15rem;
+        width: 90vw; max-width: 90vw;
+        margin-left: 50%; transform: translateX(-50%); /* 90vw centré viewport */
+      }
+    }
+    @media (max-width: 540px) { .form-row { grid-template-columns: 1fr; } }
 
     /* ===================== FOOTER ===================== */
-    .footer {
-      background: var(--navy); padding: 3rem 2rem; text-align: center;
-      border-top: 1px solid rgba(255,255,255,0.06);
-    }
-    .footer-brand {
-      font-family: 'DM Serif Display', Georgia, serif;
-      color: white; font-size: 1rem; margin-bottom: 0.5rem;
-    }
-    .footer-brand span { color: var(--pop); }
-    .footer-text { color: rgba(255,255,255,0.3); font-size: 0.75rem; line-height: 1.8; }
-    .footer-divider { width: 40px; height: 1px; background: rgba(255,255,255,0.1); margin: 1.5rem auto; }
-
-    /* ===================== ANIMATIONS ===================== */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes chevronBounce {
-      0%, 100% { margin-top: 0; opacity: 0.4; }
-      50%      { margin-top: 8px; opacity: 1; }
-    }
-    .reveal-item {
-      opacity: 0; transform: translateY(24px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .reveal-item.visible { opacity: 1; transform: translateY(0); }
+    .footer { background: var(--navy); text-align: center; padding: 3rem 2rem; border-top: 1px solid rgba(255,255,255,0.08); }
+    .footer img { height: 70px; width: auto; margin: 0 auto 1rem; display: block; opacity: 0.8; }
+    .footer-text { color: rgba(255,255,255,0.6); font-size: 0.82rem; margin-top: 0.35rem; }
   </style>
-  <script src="/config.js"></script>
-  <script src="/testimonials.js"></script>
-  <script src="/participants.js"></script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3KW38LD"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3KW38LD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <!-- NAV -->
 <nav class="nav">
-  <a href="/" class="nav-logo"><img src="/logo-navbar.svg" alt="Quadral" width="182" height="36" /></a>
+  <a href="#" class="nav-logo"><img src="/logo-navbar.svg" alt="Quadral" width="182" height="36" /></a>
   <div class="nav-actions">
-    <span class="nav-badge">Printemps 2026</span>
-    <a href="#equipe" class="nav-link nav-team">Équipe</a>
-    <a href="https://www.linkedin.com/company/quadral/" target="_blank" rel="noopener noreferrer" class="nav-link nav-linkedin" aria-label="Nous suivre sur LinkedIn">
+    <span class="nav-badge">Édition 2026 · Terminée</span>
+    <a href="#form2027" class="nav-link">Préinscription 2027</a>
+    <a href="https://www.linkedin.com/company/quadral/" target="_blank" rel="noopener noreferrer" class="nav-link" aria-label="Nous suivre sur LinkedIn">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-      <span class="nav-linkedin-text">Nous suivre</span>
+      <span>Nous suivre</span>
     </a>
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- 1. HERO -->
 <section class="hero">
-  <div style="position:absolute;inset:0;background-image:url('/hero-bg.webp');background-size:cover;background-position:center;opacity:0.15;"></div>
-  <div class="hero-grid"></div>
+  <div class="hero-bg"></div>
   <div class="hero-glow hero-glow-1"></div>
   <div class="hero-glow hero-glow-2"></div>
-  <div class="hero-glow hero-glow-3"></div>
   <div class="hero-content">
-    <p class="hero-eyebrow">Tournée nationale · Mai — Juin 2026</p>
-    <h1 class="hero-title">Les Rencontres<br/>du <span style="color:#f8c1d9;">Logement Social</span></h1>
-    <p class="hero-sub" style="color:white;">Une matinée d'échanges et de cas pratiques entre décideurs du logement social pour optimiser vos stratégies de cession, de gestion et de valorisation.</p>
-    <div class="hero-stats">
-      <div class="hero-stat" style="text-align:center">
-        <div class="hero-stat-number">10</div>
-        <div class="hero-stat-label">Villes</div>
-      </div>
-      <div class="hero-stat" style="text-align:center">
-        <div class="hero-stat-number">4</div>
-        <div class="hero-stat-label">Ateliers au choix</div>
-      </div>
-      <div class="hero-stat" style="text-align:center">
-        <div class="hero-stat-number">1</div>
-        <div class="hero-stat-label">Matinée</div>
-      </div>
+    <p class="hero-eyebrow">LE HAVRE | PARIS | LYON | ANNECY | BORDEAUX | STRASBOURG | TOULOUSE | MARSEILLE | LILLE</p>
+    <h1 class="hero-title">Les Rencontres<br/>du <em>Logement Social</em></h1>
+    <p class="hero-sub">RDV en 2027 pour un nouveau format mais toujours autant d'échanges.</p>
+    <div class="hero-ctas">
+      <a href="#bilan" class="btn btn-ghost">Voir le bilan</a>
+      <a href="#form2027" class="btn btn-primary">Préinscription 2027</a>
     </div>
-    <a href="#villes" class="hero-cta">Découvrir les villes ↓</a>
   </div>
 </section>
 
-<!-- VALUE PROPOSITION -->
-<section id="value" class="value-section">
-  <div class="value-inner">
-    <div class="value-header reveal-item">
-      <p class="value-eyebrow">Pourquoi cette tournée</p>
-      <h2 class="value-title">La valeur cachée dans votre patrimoine peut financer vos prochains projets</h2>
+<!-- 2. REMERCIEMENT -->
+<section class="section section--white" id="merci">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2 class="section-title">Merci à tous les participants qui ont fait cette tournée</h2>
     </div>
-    <div class="value-prose reveal-item">
-      <div class="value-prose-block">
-        <div class="value-prose-subtitle">
-          <span class="value-prose-num">01</span>
-          <h3 class="value-prose-h3">Une équation de plus en plus complexe</h3>
+    <div class="thanks-logos" id="thanksLogos"></div>
+
+    <!-- Témoignages (design exact : 3 cartes + flèches latérales) -->
+    <div class="testi-subhead">
+      <p class="eyebrow">Ils donnent leur avis</p>
+    </div>
+    <div class="testi-carousel" tabindex="0" role="region" aria-label="Témoignages des participants">
+      <button class="testi-arrow testi-arrow--prev" type="button" aria-label="Témoignage précédent">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="testi-stage" id="testiStage"></div>
+      <button class="testi-arrow testi-arrow--next" type="button" aria-label="Témoignage suivant">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+    <div class="testi-dots" id="testiDots"></div>
+  </div>
+</section>
+
+<!-- 3. BILAN -->
+<section class="section section--navy" id="bilan">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="eyebrow">Le bilan de la tournée</p>
+      <h2 class="section-title">Le logement social n'est pas en crise.<br/><span class="hi">Il change de modèle.</span></h2>
+      <p class="section-sub">Neuf villes, neuf territoires avec une histoire, des contraintes et des contextes patrimoniaux propres. Voici ce que le terrain nous a dit.</p>
+    </div>
+    <div class="bilan-carousel">
+      <div class="bilan-track" id="bilanTrack"></div>
+      <div class="bilan-arrows">
+        <button class="bilan-arrow" id="bilanPrev" type="button" aria-label="Précédent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="bilan-arrow" id="bilanNext" type="button" aria-label="Suivant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+    </div>
+    <div class="bilan-cta-wrap">
+      <a href="#entreprise" class="bilan-cta">Voir les solutions Quadral →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 4. ENTREPRISE -->
+<section class="section section--warm" id="entreprise">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="eyebrow">Vos interlocuteurs</p>
+      <h2 class="section-title">À chaque enjeu, son expert</h2>
+      <p class="section-sub">Sélectionnez un sujet pour identifier les bons interlocuteurs.</p>
+    </div>
+    <div class="pills" id="pills"></div>
+    <div class="team-scroller">
+      <div class="team-grid" id="teamGrid"></div>
+      <div class="team-arrows">
+        <button class="team-arrow" id="teamPrev" type="button" aria-label="Précédent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="team-arrow" id="teamNext" type="button" aria-label="Suivant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. FORMULAIRE 2027 -->
+<section class="section section--white" id="form2027">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="eyebrow">Tournée 2027</p>
+      <h2 class="section-title">Faites partie de la tournée 2027 et échangez avec vos pairs</h2>
+    </div>
+    <div class="form-box" id="formBox">
+      <form id="preinscription2027" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label>Prénom <span class="req">*</span></label>
+            <input type="text" name="prenom" required />
+          </div>
+          <div class="form-field">
+            <label>Nom <span class="req">*</span></label>
+            <input type="text" name="nom" required />
+          </div>
         </div>
-        <p>Réduction de loyer de solidarité, hausse des coûts de rénovation énergétique, pression sur les fonds propres, contraintes réglementaires croissantes : les bailleurs sociaux doivent aujourd'hui faire plus avec moins, sans rien céder à leur mission d'intérêt général.</p>
-      </div>
-      <div class="value-prose-block">
-        <div class="value-prose-subtitle">
-          <span class="value-prose-num">02</span>
-          <h3 class="value-prose-h3">Des marges de manœuvre invisibles</h3>
+        <div class="form-field">
+          <label>Entreprise <span class="req">*</span></label>
+          <input type="text" name="entreprise" required />
         </div>
-        <p>Au contact quotidien des bailleurs sociaux, nous faisons un constat partagé : dans chaque organisation, des marges de manœuvre existent. Un parc tertiaire mal valorisé, un arbitrage différé, une donnée patrimoniale dispersée, une opportunité de cession non détectée. Ces gisements de valeur ne sont pas absents, ils sont invisibles… Pas par manque de compétence, mais faute de temps, d'outils ou de regard transversal.</p>
-      </div>
-      <div class="value-prose-block">
-        <div class="value-prose-subtitle">
-          <span class="value-prose-num">03</span>
-          <h3 class="value-prose-h3">Six expertises pour une vision transversale</h3>
+        <div class="form-field">
+          <label>E-mail <span class="req">*</span></label>
+          <input type="email" name="email" required />
         </div>
-        <p>C'est précisément ce regard transversal qui structure Quadral. Six expertises complémentaires : Transactions, Expertise, Conseil en Financement, Property, Immobilier d'Entreprise et E-Services pour couvrir l'ensemble du cycle de vie d'un actif. Cette continuité et cette vision, peu d'acteurs peuvent l'offrir au logement social.</p>
-      </div>
-      <div class="value-prose-block">
-        <div class="value-prose-subtitle">
-          <span class="value-prose-num">04</span>
-          <h3 class="value-prose-h3">Une matinée pour activer les leviers</h3>
+        <div class="form-field">
+          <label>Ville souhaitée pour la tournée <span class="req">*</span></label>
+          <input type="text" name="ville" placeholder="ex : Nantes, Rennes, Nice…" required />
         </div>
-        <p>Cette tournée traduit cette approche en format court : une demi-journée, des cas concrets, des leviers activables, des échanges directs entre pairs. Pas de discours commercial. L'objectif : repartir avec des pistes opérationnelles pour reconstituer vos fonds propres et financer vos futurs projets grâce aux ressources cachées de votre patrimoine.</p>
-      </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label>Période de la tournée</label>
+            <select name="periode">
+              <option value="">— Choisir —</option>
+              <option value="T1">Trimestre 1</option>
+              <option value="T2">Trimestre 2</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>Format souhaité</label>
+            <select name="format">
+              <option value="">— Choisir —</option>
+              <option value="matinee-dejeuner">Matinée + Déjeuner</option>
+              <option value="apresmidi-cocktail">Après-midi + Networking cocktail</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-field">
+          <label>Commentaire</label>
+          <textarea name="commentaire" rows="3" placeholder="N'hésitez pas à nous proposer vos idées pour le futur format"></textarea>
+        </div>
+        <button type="submit" class="form-submit">Je m'inscris à la tournée 2027</button>
+      </form>
     </div>
   </div>
 </section>
 
-<!-- CITIES GRID -->
-<section class="cities-section" id="villes">
-  <div class="hero-grid"></div>
-  <div class="cities-inner">
-    <div class="cities-header reveal-item">
-      <p class="cities-eyebrow">10 étapes</p>
-      <h2 class="cities-title">Choisissez votre ville</h2>
-      <p class="cities-sub">Cliquez sur une étape pour découvrir le programme et vous inscrire.</p>
-    </div>
-    <div class="city-grid" id="cityGrid"></div>
-  </div>
-</section>
-
-
-<!-- CTA BANNER -->
-<section class="cta-section">
-  <div class="cta-inner reveal-item">
-    <h2 class="cta-title">Prêt à nous rejoindre ?</h2>
-    <p class="cta-text">Choisissez l'étape la plus proche de chez vous et réservez votre place en quelques clics. Inscription gratuite, places limitées.</p>
-    <div class="cta-buttons">
-      <a href="#villes" class="cta-button">Je choisis ma ville ↑</a>
-      <a href="https://www.linkedin.com/company/quadral/" target="_blank" rel="noopener noreferrer" class="cta-button cta-button-secondary">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        Nous suivre
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- TEAM -->
-<section class="team-section" id="equipe">
-  <div class="team-inner">
-    <div class="team-header reveal-item">
-      <p class="team-eyebrow">Vos interlocuteurs</p>
-      <h2 class="team-title">L'équipe Quadral</h2>
-      <p class="team-sub">Les directeurs métier que vous rencontrerez sur les étapes. Ajoutez-les à vos contacts en un clic.</p>
-    </div>
-    <div class="team-grid" id="teamGrid"></div>
-  </div>
-</section>
-
-<!-- FOOTER -->
+<!-- 6. FOOTER -->
 <footer class="footer">
-  <img src="/logo-quadral.svg" alt="Quadral" width="324" height="80" style="height:80px;width:auto;margin:0 auto 1rem;display:block;opacity:0.8;" />
-  <div class="footer-divider"></div>
-  <p class="footer-text">© 2026 Quadral</p>
-  <p class="footer-text">Événement réservé aux professionnels du logement social.</p>
+  <img src="/logo-quadral.svg" alt="Quadral" />
+  <div class="footer-text">© 2026 Quadral</div>
+  <div class="footer-text">Événement réservé aux professionnels du logement social.</div>
 </footer>
 
 <script>
-  const cities = [
-    { name: "Le Havre",   date: "6 mai",   slug: "le-havre",   img: "lehavre" },
-    { name: "Paris",      date: "19 mai",  slug: "paris",      img: "paris" },
-    { name: "Lyon",       date: "4 juin",  slug: "lyon",       img: "lyon" },
-    { name: "Annecy",     date: "5 juin",  slug: "annecy",     img: "annecy" },
-    { name: "Bordeaux",   date: "9 juin",  slug: "bordeaux",   img: "bordeaux" },
-    { name: "Strasbourg", date: "18 juin", slug: "strasbourg",  img: "strasbourg" },
-    { name: "Toulouse",   date: "23 juin", slug: "toulouse",    img: "toulouse" },
-    { name: "Marseille",  date: "24 juin", slug: "marseille",   img: "marseille" },
-    { name: "Lille",      date: "30 juin", slug: "lille",       img: "lille" },
-  ];
+// ══════════════════════════════════════════════════════════════
+//  Page "après-tournée" (bilan + RDV 2027) — données + interactions
+// ══════════════════════════════════════════════════════════════
 
-  // Détection des événements passés (date_iso <= aujourd'hui)
-  const _today = new Date(); _today.setHours(0, 0, 0, 0);
-  function isEventPast(slug) {
-    const cfg = (typeof LIEUX_CONFIG !== 'undefined') ? LIEUX_CONFIG[slug] : null;
-    if (!cfg || !cfg.date_iso) return false;
-    return new Date(cfg.date_iso + 'T00:00:00') <= _today;
-  }
+// ─── PARTICIPANTS (30 logos statiques — source : participants/ en ligne) ──
+const PARTICIPANTS = [
+  '1001vies','3fnormanvie','3fsud','alceane','alteal','antin','batigere','CDC-habitat',
+  'Cosivia','domial','domofrance','familleprovence','grandlyon','habitat77','habitatlill',
+  'halpades','immobiliererhonealpes','logissia','neolia','onv','patrimoinesa','rivesdeseine',
+  'sdh','sdaccess','sedes','Seqens','soikos','tmh','vichy','vilogia',
+];
+const thanksLogos = document.getElementById('thanksLogos');
+PARTICIPANTS.forEach(name => {
+  const div = document.createElement('div');
+  div.className = 'thanks-logo-item';
+  div.innerHTML = `<img src="/participants/${name}.png" alt="${name}" loading="lazy" onerror="this.parentElement.style.display='none'" />`;
+  thanksLogos.appendChild(div);
+});
 
-  const grid = document.getElementById("cityGrid");
-  cities.forEach((city, i) => {
-    const past = isEventPast(city.slug);
-    const card = document.createElement(past ? "div" : "a");
-    if (!past) card.href = `/${city.slug}.html`;
-    card.className = "city-card reveal-item" + (past ? " city-card-past" : "");
-    card.innerHTML = `
-      <div class="city-card-bg" style="background-image:url('/${city.img}.webp');opacity:0.35;"></div>
-      <div class="city-card-overlay"></div>
-      <div class="city-card-content">
-        <span class="city-card-number">${String(i + 1).padStart(2, '0')}</span>
-        <div class="city-card-date">${past ? 'ÉVÉNEMENT PASSÉ' : city.date + ' 2026'}</div>
-        <div class="city-card-name">${city.name}</div>
-        ${past ? '' : `<div class="city-card-cta">S'inscrire <span class="city-card-cta-arrow">→</span></div>`}
-      </div>
-    `;
-    grid.appendChild(card);
+// ─── TÉMOIGNAGES (8 — source de vérité : testimonials.js en ligne) ───
+const TESTIMONIALS = [
+  { company: 'Seqens', logo: '/participants/Seqens.png', quote: 'Merci à vous, c\'était avec plaisir. Très intéressants ces partages d\'informations et d\'expériences.' },
+  { company: 'Cosivia', logo: '/participants/Cosivia.png', quote: 'Merci beaucoup pour l\'organisation de cette matinée. J\'ai apprécié les différents échanges et la qualité des interventions. Je reste attentif à la réception des présentations et suis bien entendu disponible pour un prochain rendez-vous.' },
+  { company: 'Antin Résidences', logo: '/participants/antin.png', quote: 'Je tiens à vous remercier pour l\'invitation et la matinée passée. Ce fut un plaisir d\'échanger sur les différents sujets abordés. J\'espère sincèrement que cette initiative sera renouvelée prochainement. Merci encore pour votre accueil.' },
+  { company: '1001 Vies Habitat', logo: '/participants/1001vies.png', quote: 'Une rencontre inspirante et prospective sur les enjeux de demain, et une matinée riche en intelligence collective. Merci à Quadral pour ce moment.' },
+  { company: 'Vichy Habitat', logo: '/participants/vichy.png', quote: 'Super accueil avec une équipe qui maitrise leurs sujets, très agréable et très intéressant.' },
+  { company: 'SDH Access', logo: '/participants/sdaccess.png', quote: 'Merci pour l\'invitation et la matinée très enrichissante.' },
+  { company: 'Alteal', logo: '/participants/alteal.png', quote: 'Ce fut des échanges constructifs, notamment les actions commerciales menées sur les locataires en place dans les résidences mises en vente.' },
+  { company: '3F Sud', logo: '/participants/3fsud.png', quote: 'Rencontres riches de contenu et d\'échanges avec des ateliers intéressants en mode co-working. A renouveler l\'année prochaine. Merci.' },
+];
+const testiStage = document.getElementById('testiStage');
+const testiDots = document.getElementById('testiDots');
+const testiTotal = TESTIMONIALS.length;
+TESTIMONIALS.forEach((t, i) => {
+  const card = document.createElement('article');
+  card.className = 'testi-card';
+  card.innerHTML = `
+    <div class="testi-logo-wrap"><img class="testi-logo" src="${t.logo}" alt="${t.company}" onerror="this.style.display='none'"/></div>
+    <blockquote class="testi-quote"><span class="testi-quote-mark" aria-hidden="true">“</span>${t.quote}</blockquote>
+    <p class="testi-author">${t.company}</p>`;
+  testiStage.appendChild(card);
+  const dot = document.createElement('button');
+  dot.className = 'testi-dot'; dot.type = 'button';
+  dot.addEventListener('click', () => { goTesti(i); restartTesti(); });
+  testiDots.appendChild(dot);
+});
+const testiCards = Array.from(testiStage.querySelectorAll('.testi-card'));
+const testiDotEls = Array.from(testiDots.querySelectorAll('.testi-dot'));
+let testiCur = 0, testiTimer = null;
+function applyTesti() {
+  testiCards.forEach((card, i) => {
+    const rel = ((i - testiCur) % testiTotal + testiTotal) % testiTotal;
+    card.classList.remove('is-prev','is-current','is-next','is-hidden');
+    if (rel === 0) card.classList.add('is-current');
+    else if (rel === testiTotal - 1) card.classList.add('is-prev');
+    else if (rel === 1) card.classList.add('is-next');
+    else card.classList.add('is-hidden');
   });
+  testiDotEls.forEach((d, i) => d.classList.toggle('is-active', i === testiCur));
+}
+function goTesti(i) { testiCur = ((i % testiTotal) + testiTotal) % testiTotal; applyTesti(); }
+function startTesti() { stopTesti(); if (testiTotal > 1) testiTimer = setInterval(() => goTesti(testiCur + 1), 4000); }
+function stopTesti() { if (testiTimer) { clearInterval(testiTimer); testiTimer = null; } }
+function restartTesti() { stopTesti(); startTesti(); }
+document.querySelector('.testi-arrow--prev').addEventListener('click', () => { goTesti(testiCur - 1); restartTesti(); });
+document.querySelector('.testi-arrow--next').addEventListener('click', () => { goTesti(testiCur + 1); restartTesti(); });
+const testiCarousel = document.querySelector('.testi-carousel');
+testiCarousel.addEventListener('mouseenter', stopTesti);
+testiCarousel.addEventListener('mouseleave', startTesti);
+testiCur = Math.floor(Math.random() * testiTotal);
+applyTesti(); startTesti();
 
-  // Intersection Observer
-  const observer = new IntersectionObserver(
-    entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); }),
-    { threshold: 0.08 }
-  );
-  document.querySelectorAll(".reveal-item").forEach((el, i) => {
-    el.style.transitionDelay = `${(i % 6) * 0.08}s`;
-    observer.observe(el);
-  });
+// ─── BILAN (cartes du carrousel — slide 1 = en-tête de section) ───
+// Source : visuels carrousel "Le bilan" (slides 2 à 6).
+const BILAN = [
+  {
+    emoji: '📊',
+    title: `Une équation de plus en plus <span class="hi">complexe</span>`,
+    text: `Réduction de loyer de solidarité, hausse des coûts de rénovation énergétique, pression sur les fonds propres, contraintes réglementaires croissantes.<br><br>Pour les bailleurs : il faut faire plus avec moins, sans rien céder à la mission d'intérêt général.`
+  },
+  {
+    emoji: '🔑 🏠',
+    title: `Financer et accompagner <span class="hi">l'accession</span>`,
+    text: `Les acquéreurs ont changé, le financement s'est durci. Les dispositifs pour rendre l'accession abordable existent :<br><br>PSLA, VEFA, BRS, vente HLM, vente à l'occupant et à ses ascendants ou descendants…<br><br>Aucun ne tient ses promesses sans un accompagnement fort du parcours, du premier contact à la signature.`
+  },
+  {
+    emoji: '🤝',
+    title: `Bailleurs et collectivités, <span class="hi">mieux ensemble</span>`,
+    text: `Mêmes territoires, même mission, leviers complémentaires.<br><br>C'est en avançant main dans la main que les projets prennent forme.`
+  },
+  {
+    emoji: '💡',
+    title: `Des leviers de valeur dans <span class="hi">le patrimoine</span>`,
+    text: `Le patrimoine existant recèle une valeur encore à activer :<br><br>• un parc tertiaire à mieux valoriser<br>• un arbitrage à structurer<br>• une donnée patrimoniale à consolider<br>• une opportunité de cession à révéler<br><br>Une question de temps, d'outils et de regard transversal.`
+  },
+  {
+    emoji: '🙏',
+    title: `Des problématiques <span class="hi">communes</span>, des réponses à bâtir <span class="hi">ensemble</span>`,
+    text: `Ces enjeux traversent l'ensemble des bailleurs.<br><br>C'est ce qui est ressorti de notre tournée terrain et c'est ce qui a rendu ce partage d'expérience aussi précieux.<br><br><strong class="bilan-card-thanks">Encore <span class="hi">MERCI</span> à tous nos participants pour ces échanges francs et enrichissants.</strong>`
+  },
+];
+const bilanTrack = document.getElementById('bilanTrack');
+BILAN.forEach((b, i) => {
+  const card = document.createElement('div');
+  card.className = 'bilan-card';
+  const num = String(i + 1).padStart(2, '0');
+  card.innerHTML = `
+    <div class="bilan-card-num">${num}</div>
+    <div class="bilan-card-emoji">${b.emoji || ''}</div>
+    <div class="bilan-card-title">${b.title}</div>
+    <div class="bilan-card-text">${b.text}</div>
+    ${b.pending ? '<div class="bilan-card-placeholder">⏳ Texte à fournir</div>' : ''}`;
+  bilanTrack.appendChild(card);
+});
+function scrollBilan(dir) {
+  const card = bilanTrack.querySelector('.bilan-card');
+  if (!card) return;
+  const step = card.offsetWidth + 24;
+  bilanTrack.scrollBy({ left: dir * step, behavior: 'smooth' });
+}
+document.getElementById('bilanPrev').addEventListener('click', () => scrollBilan(-1));
+document.getElementById('bilanNext').addEventListener('click', () => scrollBilan(1));
+// Fondu gauche/droite piloté par la position de scroll (carte 1 nette au repos)
+function updateBilanFade() {
+  const t = bilanTrack;
+  const max = t.scrollWidth - t.clientWidth;
+  t.classList.toggle('scrolled', t.scrollLeft > 1);
+  t.classList.toggle('at-end', max > 0 && t.scrollLeft >= max - 1);
+}
+bilanTrack.addEventListener('scroll', updateBilanFade, { passive: true });
+window.addEventListener('resize', updateBilanFade);
+updateBilanFade();
 
-  // ══════════════════════════════════════════════════════════
-  //  TEAM — Cartes directeurs + vCard
-  // ══════════════════════════════════════════════════════════
-  const team = [
-    {
-      first: "Kamel", last: "AOUDIA",
-      positions: [{ role: "Président", company: "Quadral" }],
-      email: "kamel.aoudia@quadral.fr", phone: "+33 6 48 18 82 00", linkedin: null,
-      photo: "/team/kamel.webp",
-    },
-    {
-      first: "Pierre", last: "BONHOMME",
-      positions: [
-        { role: "Directeur Général Adjoint", company: "Quadral Transactions" },
-        { role: "Directeur",                 company: "Quadral Conseil en Financement" },
-      ],
-      email: "pierre.bonhomme@quadral.fr", phone: "+33 6 85 31 70 78",
-      linkedin: "https://www.linkedin.com/in/pierre-bonhomme-14433263/",
-      photo: "/team/pierre.webp",
-    },
-    {
-      first: "Maud", last: "GRANDJEAN",
-      positions: [{ role: "Directrice Générale Adjointe", company: "Quadral Transactions" }],
-      email: "maud.grandjean@quadral.fr", phone: "+33 6 60 03 27 69",
-      linkedin: "https://www.linkedin.com/in/maud-grandjean-894b43aa/",
-      photo: "/team/maud.webp",
-    },
-    {
-      first: "Hélène-Claire", last: "DUPLAT",
-      positions: [{ role: "Directrice Générale", company: "Quadral Expertise" }],
-      email: "heleneclaire.duplat@quadral.fr", phone: "+33 6 85 47 69 30",
-      linkedin: "https://www.linkedin.com/in/h%C3%A9l%C3%A8ne-claire-duplat/",
-      photo: "/team/helene-claire.webp",
-    },
-    {
-      first: "Benoit", last: "ARWEILER",
-      positions: [{ role: "Directeur Général", company: "Quadral E-Services" }],
-      email: "benoit.arweiler@quadral.fr", phone: "+33 6 79 27 55 37",
-      linkedin: "https://www.linkedin.com/in/benoitarweiler/",
-      photo: "/team/benoit.webp",
-    },
-    {
-      first: "Clément", last: "HENNEQUIN",
-      positions: [
-        { role: "Directeur Général",         company: "Quadral Immobilier d'Entreprise" },
-        { role: "Responsable Vente en bloc", company: "Quadral Transactions" },
-      ],
-      email: "clement.hennequin@quadral.fr", phone: "+33 6 43 28 50 27",
-      linkedin: "https://www.linkedin.com/in/cl%C3%A9ment-hennequin/",
-      photo: "/team/clement.webp",
-    },
-    {
-      first: "Yann", last: "BECHU",
-      positions: [{ role: "Directeur Général", company: "Quadral Property" }],
-      email: "yann.bechu@quadral.fr", phone: "+33 6 85 81 44 50",
-      linkedin: "https://www.linkedin.com/in/yann-bechu/",
-      photo: "/team/yann.webp",
-    },
-  ];
+// ─── ENTREPRISE — pills + fiches équipe ───────────────────────
+// Profils équipe + filtres (mis à jour 28/06/2026 depuis equipe-2027-a-completer.xlsx)
+const FILTERS = ['Commercialisation','Vente en bloc','Vente en lot par lot','Administration des ventes','Financement','Solutions digitales','Parc tertiaire','Syndic - Copro - Gestion','LLI','Expertise'];
+const TEAM = [
+  { first:'Pierre', last:'BONHOMME', positions:[{role:'Directeur Général Adjoint',company:'Quadral Transactions'},{role:'Directeur',company:'Quadral Conseil en Financement'}], email:'pierre.bonhomme@quadral.fr', phone:'+33 6 85 31 70 78', linkedin:'https://www.linkedin.com/in/pierre-bonhomme-14433263/', photo:'/team/pierre.webp', tags:['Commercialisation','Vente en lot par lot','Financement'] },
+  { first:'Maud', last:'GRANDJEAN', positions:[{role:'Directrice Générale Adjointe',company:'Quadral Transactions'}], email:'maud.grandjean@quadral.fr', phone:'+33 6 60 03 27 69', linkedin:'https://www.linkedin.com/in/maud-grandjean-894b43aa/', photo:'/team/maud.webp', tags:['Commercialisation','Vente en lot par lot','Administration des ventes'] },
+  { first:'Clément', last:'HENNEQUIN', positions:[{role:'Directeur Général',company:'Quadral Immobilier d\'Entreprise'},{role:'Responsable Vente en bloc',company:'Quadral Transactions'}], email:'clement.hennequin@quadral.fr', phone:'+33 6 43 28 50 27', linkedin:'https://www.linkedin.com/in/cl%C3%A9ment-hennequin/', photo:'/team/clement.webp', tags:['Vente en bloc','Vente en lot par lot','Parc tertiaire','Commercialisation'] },
+  { first:'Benoit', last:'ARWEILER', positions:[{role:'Directeur Général',company:'Quadral E-Services'}], email:'benoit.arweiler@quadral.fr', phone:'+33 6 79 27 55 37', linkedin:'https://www.linkedin.com/in/benoitarweiler/', photo:'/team/benoit.webp', tags:['Solutions digitales'] },
+  { first:'Yann', last:'BECHU', positions:[{role:'Directeur Général',company:'Quadral Property'}], email:'yann.bechu@quadral.fr', phone:'+33 6 85 81 44 50', linkedin:'https://www.linkedin.com/in/yann-bechu/', photo:'/team/yann.webp', tags:['Syndic - Copro - Gestion','Parc tertiaire','LLI','Commercialisation'] },
+  { first:'Hélène-Claire', last:'DUPLAT', positions:[{role:'Directrice Générale',company:'Quadral Expertise'}], email:'heleneclaire.duplat@quadral.fr', phone:'+33 6 85 47 69 30', linkedin:'https://www.linkedin.com/in/h%C3%A9l%C3%A8ne-claire-duplat/', photo:'/team/helene-claire.webp', tags:['Expertise'] },
+  { first:'Alexis', last:'RIGNY', positions:[{role:'Directeur',company:'Quadral Immobilier d\'Entreprise'}], email:'alexis.rigny@quadral.fr', phone:'+33 6 71 28 54 09', linkedin:'https://www.linkedin.com/in/alexisrigny/', photo:'/team/alexis.webp', tags:['Parc tertiaire','Commercialisation'] },
+  { first:'Christelle', last:'HOUPERT', positions:[{role:'Directrice Générale Déléguée',company:'Quadral Property'}], email:'christelle.houpert@quadral.fr', phone:'+33 6 83 08 22 53', linkedin:'https://www.linkedin.com/in/christelle-houpert-20a644153/', photo:'/team/christelle.webp', tags:['Syndic - Copro - Gestion','Parc tertiaire','LLI','Commercialisation'] },
+];
+const LINKEDIN_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>';
 
-  const LINKEDIN_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>';
-
-  function escapeHTML(s) {
-    return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  }
-  function vcardEscape(s) {
-    return String(s).replace(/\\/g, '\\\\').replace(/\n/g, '\\n').replace(/,/g, '\\,').replace(/;/g, '\\;');
-  }
-  function buildVCard(p) {
-    const titleStr = p.positions.map(pos => `${pos.role} — ${pos.company}`).join(' · ');
-    const orgStr   = p.positions[0].company;
-    const lines = [
-      'BEGIN:VCARD',
-      'VERSION:3.0',
-      `N:${vcardEscape(p.last)};${vcardEscape(p.first)};;;`,
-      `FN:${vcardEscape(p.first + ' ' + p.last)}`,
-      `ORG:${vcardEscape(orgStr)}`,
-      `TITLE:${vcardEscape(titleStr)}`,
-      `EMAIL;TYPE=WORK:${p.email}`,
-    ];
-    if (p.phone)    lines.push(`TEL;TYPE=WORK,VOICE:${p.phone}`);
-    if (p.linkedin) lines.push(`URL:${p.linkedin}`);
-    lines.push('END:VCARD');
-    return lines.join('\r\n');
-  }
-  function downloadVCard(p) {
-    const blob = new Blob([buildVCard(p)], { type: 'text/vcard;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `${p.first}-${p.last}.vcf`;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 0);
-  }
-
-  const teamGrid = document.getElementById('teamGrid');
-  team.forEach(p => {
+function vcardEscape(s){return String(s).replace(/\\/g,'\\\\').replace(/\n/g,'\\n').replace(/,/g,'\\,').replace(/;/g,'\\;');}
+function buildVCard(p){
+  const titleStr=p.positions.map(x=>`${x.role} — ${x.company}`).join(' · ');
+  const lines=['BEGIN:VCARD','VERSION:3.0',`N:${vcardEscape(p.last)};${vcardEscape(p.first)};;;`,`FN:${vcardEscape(p.first+' '+p.last)}`,`ORG:${vcardEscape(p.positions[0].company)}`,`TITLE:${vcardEscape(titleStr)}`,`EMAIL;TYPE=WORK:${p.email}`];
+  if(p.phone)lines.push(`TEL;TYPE=WORK,VOICE:${p.phone}`);
+  if(p.linkedin)lines.push(`URL:${p.linkedin}`);
+  lines.push('END:VCARD');
+  return lines.join('\r\n');
+}
+function downloadVCard(p){
+  const blob=new Blob([buildVCard(p)],{type:'text/vcard;charset=utf-8'});
+  const url=URL.createObjectURL(blob);const a=document.createElement('a');
+  a.href=url;a.download=`${p.first}-${p.last}.vcf`;document.body.appendChild(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),0);
+}
+const pillsEl = document.getElementById('pills');
+const teamGrid = document.getElementById('teamGrid');
+const teamScroller = document.querySelector('.team-scroller');
+let activeFilter = FILTERS[0];
+FILTERS.forEach((f, i) => {
+  const b = document.createElement('button');
+  b.className = 'pill' + (i === 0 ? ' is-active' : '');
+  b.textContent = f;
+  b.addEventListener('click', () => { activeFilter = f; renderPills(); renderTeam(); });
+  pillsEl.appendChild(b);
+});
+function renderPills() {
+  pillsEl.querySelectorAll('.pill').forEach(p => p.classList.toggle('is-active', p.textContent === activeFilter));
+}
+function renderTeam() {
+  teamGrid.innerHTML = '';
+  TEAM.filter(p => p.tags.includes(activeFilter)).forEach(p => {
     const card = document.createElement('div');
-    card.className = 'team-card reveal-item';
-    const positionsHTML = p.positions.map(pos => `
-      <div class="team-position">
-        <div class="team-role">${escapeHTML(pos.role)}</div>
-        <div class="team-company">${escapeHTML(pos.company)}</div>
-      </div>
-    `).join('');
+    card.className = 'team-card';
+    const pos = p.positions.map(x => `<div class="team-position"><div class="team-role">${x.role}</div><div class="team-company">${x.company}</div></div>`).join('');
+    const tags = p.tags.map(t => `<span class="team-tag">${t}</span>`).join('');
+    const phoneClean = p.phone ? p.phone.replace(/\s/g,'') : '';
     card.innerHTML = `
-      <img class="team-photo" src="${p.photo}" alt="${escapeHTML(p.first + ' ' + p.last)}" loading="lazy" width="250" height="250" />
-      <div class="team-name">${escapeHTML(p.first + ' ' + p.last)}</div>
-      <div class="team-positions">${positionsHTML}</div>
-      <div class="team-actions">
-        <button type="button" class="team-vcard-btn">+ Ajouter la fiche</button>
-        ${p.linkedin ? `<a class="team-linkedin-btn" href="${p.linkedin}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn ${escapeHTML(p.first + ' ' + p.last)}">${LINKEDIN_SVG}</a>` : ''}
+      <img class="team-photo" src="${p.photo}" alt="${p.first} ${p.last}" loading="lazy" />
+      <div class="team-name">${p.first} ${p.last}</div>
+      <div class="team-positions">${pos}</div>
+      <div class="team-tags">${tags}</div>
+      <div class="team-coords">
+        <div>✉ <a href="mailto:${p.email}">${p.email}</a></div>
+        ${p.phone ? `<div>☎ <a href="tel:${phoneClean}">${p.phone}</a></div>` : ''}
       </div>
-    `;
-    card.querySelector('.team-vcard-btn').addEventListener('click', () => {
-      downloadVCard(p);
-      window.dataLayer.push({ event: 'vcard_download', label: `${p.first} ${p.last}` });
+      <div class="team-actions">
+        <button type="button" class="team-coords-btn">Voir les coordonnées</button>
+        <button type="button" class="team-vcard-btn">+ Ajouter la fiche</button>
+        ${p.linkedin ? `<a class="team-linkedin-btn" href="${p.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn">${LINKEDIN_SVG}</a>` : ''}
+      </div>`;
+    // Desktop : toggle coordonnées
+    card.querySelector('.team-coords-btn').addEventListener('click', () => {
+      const block = card.querySelector('.team-coords');
+      const btn = card.querySelector('.team-coords-btn');
+      const open = block.classList.toggle('open');
+      btn.textContent = open ? 'Masquer' : 'Voir les coordonnées';
     });
-    if (p.linkedin) {
-      card.querySelector('.team-linkedin-btn').addEventListener('click', () => {
-        window.dataLayer.push({ event: 'linkedin_click', label: `${p.first} ${p.last}` });
-      });
-    }
+    // Mobile : vCard
+    card.querySelector('.team-vcard-btn').addEventListener('click', () => downloadVCard(p));
     teamGrid.appendChild(card);
-    observer.observe(card);
   });
+  if (!teamGrid.children.length) {
+    teamGrid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--text-muted);font-style:italic;">Aucun interlocuteur associé à ce filtre.</p>';
+  }
+  // Flèches affichées seulement s'il y a plusieurs fiches
+  teamScroller.classList.toggle('multi', teamGrid.querySelectorAll('.team-card').length > 1);
+}
+renderTeam();
+// Flèches du défileur équipe (mobile) — boucle infinie
+function scrollTeam(dir) {
+  const cards = teamGrid.querySelectorAll('.team-card');
+  if (cards.length < 2) return;
+  const step = cards[0].offsetWidth + 16; // gap mobile = 1rem
+  const cur = Math.round(teamGrid.scrollLeft / step);
+  let next = cur + dir;
+  if (next < 0) next = cards.length - 1;      // depuis la 1re → dernière fiche
+  else if (next >= cards.length) next = 0;    // depuis la dernière → 1re fiche
+  teamGrid.scrollTo({ left: next * step, behavior: 'smooth' });
+}
+document.getElementById('teamPrev').addEventListener('click', () => scrollTeam(-1));
+document.getElementById('teamNext').addEventListener('click', () => scrollTeam(1));
 
-  // ══════════════════════════════════════════════════════════
-  //  ANALYTICS / DATA LAYER — GTM
-  // ══════════════════════════════════════════════════════════
-  window.dataLayer = window.dataLayer || [];
-  document.querySelectorAll('.city-card:not(.city-card-past)').forEach(card => {
-    const name = card.querySelector('.city-card-name')?.textContent.trim();
-    card.addEventListener('click', () => {
-      window.dataLayer.push({ event: 'ville_click', label: name });
+// ─── FORMULAIRE 2027 → Google Sheet (onglet « 2027 ») ─────────
+// Envoi via la fonction Netlify /.netlify/functions/inscription-2027
+// ⚠️ Ne fonctionne qu'une fois déployé sur Netlify (pas en ouverture locale file://).
+document.getElementById('preinscription2027').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const f = e.target;
+  if (!f.prenom.value || !f.nom.value || !f.entreprise.value || !f.email.value || !f.ville.value) {
+    alert('Merci de compléter les champs obligatoires.');
+    return;
+  }
+  const btn = f.querySelector('.form-submit');
+  const btnLabel = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = 'Envoi en cours…';
+
+  const payload = {
+    prenom:      f.prenom.value.trim(),
+    nom:         f.nom.value.trim(),
+    entreprise:  f.entreprise.value.trim(),
+    email:       f.email.value.trim(),
+    ville:       f.ville.value.trim(),
+    periode:     f.periode.value,
+    format:      f.format.value,
+    commentaire: f.commentaire.value.trim(),
+  };
+
+  try {
+    const res = await fetch('/.netlify/functions/inscription-2027', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify(payload),
     });
-  });
+    const data = await res.json();
+    if (!res.ok || !data.success) throw new Error(data.message || 'Erreur');
+
+    document.getElementById('formBox').innerHTML = `
+      <div class="form-success">
+        <div class="form-success-icon">✓</div>
+        <h3>Merci, votre préinscription est enregistrée !</h3>
+        <p>${data.message}</p>
+      </div>`;
+  } catch (err) {
+    btn.disabled = false;
+    btn.textContent = btnLabel;
+    alert('Erreur lors de l\'enregistrement. Merci de réessayer dans un instant.');
+  }
+});
 </script>
 </body>
 </html>
